@@ -1,37 +1,33 @@
 import "./App.css";
 
+
 const projects = [
   {
-    number: "01",
-    name: "CareerLink",
-    type: "FULL-STACK WEB APPLICATION",
+    title: "CareerLink",
     description:
-      "A job and internship portal connecting students with opportunities, featuring authentication, recruiter workflows, and role-based access control.",
-    tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "REST APIs"],
-    result: "Built for students, recruiters, and admins",
-    repo: "",
+      "A career platform connecting students with opportunities, featuring role-based access and REST APIs.",
+    tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "REST API"],
+    result: "Designed to connect 500+ students",
+    repo: "https://github.com/bhushan-ssh/CareerLink",
   },
   {
-    number: "02",
-    name: "QuizMaster",
-    type: "BACKEND APPLICATION",
+    title: "QuizMaster",
     description:
-      "A quiz management application with CRUD APIs, secure sessions, search functionality, and performance tracking backed by a relational database.",
+      "A quiz management application with CRUD functionality, session handling, and role-based access control.",
     tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
-    result: "Designed to support 100+ concurrent users",
-    repo: "",
+    result: "Built to support 100+ concurrent users",
+    repo: "https://github.com/bhushan-ssh/Quizmaster",
   },
   {
-    number: "03",
-    name: "Uptime",
-    type: "MACHINE LEARNING · HACKATHON WINNER",
+    title: "Uptime",
     description:
-      "An AI-powered predictive maintenance system using an LSTM model to identify machine failure patterns and estimate remaining useful life.",
-    tech: ["Python", "LSTM", "Machine Learning"],
-    result: "85% prediction accuracy · 1st place at SVIT HackVerse 2K26",
-    repo: "",
+      "A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.",
+    tech: ["Python", "Machine Learning", "LSTM"],
+    result: "85% accuracy · 1st place at SVIT HackVerse 2K26",
+    repo: "https://github.com/bhushan-ssh/Uptime",
   },
 ];
+
 
 const skills = [
   {
@@ -195,41 +191,30 @@ function App() {
 
         <div className="project-grid">
           {projects.map((project) => (
-            <article className="project-card" key={project.number}>
-              <div className="project-top">
-                <span className="project-number">{project.number}</span>
-                <span className="project-arrow">↗</span>
-              </div>
+            <div className="project-card" key={project.title}>
+              <h3>{project.title}</h3>
 
-              <p className="project-type">{project.type}</p>
-              <h3>{project.name}</h3>
-              <p className="project-description">{project.description}</p>
+              <p>{project.description}</p>
 
-              <div className="tech-list">
-                {project.tech.map((tech) => (
-                  <span key={tech}>{tech}</span>
+              <div className="project-tech">
+                {project.tech.map((item) => (
+                  <span key={item}>{item}</span>
                 ))}
               </div>
 
-              <div className="project-result">{project.result}</div>
+              <p className="project-result">{project.result}</p>
 
               <div className="project-links">
-                {project.repo ? (
-                  <a
-                    className="project-link"
-                    href={project.repo}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    View source <span>↗</span>
-                  </a>
-                ) : (
-                  <span className="project-link-placeholder">
-                    Repository link to be added
-                  </span>
-                )}
+                <a
+                  href={project.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  View source ↗
+                </a>
               </div>
-            </article>
+            </div>
           ))}
         </div>
 
