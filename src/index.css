@@ -1,20 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 
 :root {
-  font-family: "Inter", sans-serif;
-  color: #f0f2ec;
-  background: #0b0d0b;
+  font-family: "DM Sans", sans-serif;
+  color: #242820;
+  background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bg: #0b0d0b;
-  --surface: #111411;
-  --text: #f0f2ec;
-  --muted: #92988d;
-  --accent: #b5f478;
-  --border: #272c25;
+  --bg: #ffffff;
+  --surface: #f7f8f5;
+  --text: #242820;
+  --muted: #73786f;
+  --accent: #527653;
+  --border: #e7e9e3;
 }
 
 * {
@@ -30,6 +30,7 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background: var(--bg);
 }
 
 a {
@@ -44,6 +45,6 @@ textarea {
 }
 
 ::selection {
-  background: #b5f478;
-  color: #0b0d0b;
+  background: #dce8d8;
+  color: #242820;
 }
