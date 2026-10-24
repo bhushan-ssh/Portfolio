@@ -291,12 +291,13 @@ function App() {
 
         <div className="social-links">
           <a
-            href="https://github.com/bhushan-ssh"
+            href="https://github.com/bhushan-ssh/"
             target="_blank"
             rel="noreferrer"
           >
             GitHub ↗
           </a>
+
           <a
             href="https://linkedin.com/in/bhushan-ssh"
             target="_blank"
@@ -304,16 +305,41 @@ function App() {
           >
             LinkedIn ↗
           </a>
+
+          <a
+            href="https://www.hackerrank.com/profile/bhushan_ssh"
+            target="_blank"
+            rel="noreferrer"
+          >
+            HackerRank ↗
+          </a>
+
+          <a
+            href="https://leetcode.com/u/bhushan_ssh/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            LeetCode ↗
+          </a>
+
           <a href="mailto:bhushan.sonawane.tech@gmail.com">Email ↗</a>
         </div>
       </section>
 
       <footer className="footer">
-        <a className="brand" href="#home">
-          bhushan<span>.</span>
+        <a href="#top" className="footer-brand">
+          bhushan.
         </a>
+
         <p>Designed &amp; built with React.</p>
-        <a href="#home">Back to top ↑</a>
+
+        <p className="copyright">
+          © 2026 Bhushan Sonawane. All rights reserved.
+        </p>
+
+        <a href="#top" className="back-to-top">
+          Back to top ↑
+        </a>
       </footer>
     </main>
   );
