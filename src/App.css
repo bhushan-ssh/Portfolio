@@ -25,6 +25,7 @@ main {
 }
 
 .brand {
+  font-family: "Manrope", sans-serif;
   color: var(--text);
   font-size: 1.45rem;
   font-weight: 800;
@@ -58,7 +59,7 @@ main {
 .nav-cta {
   color: var(--text) !important;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 5px;
   padding: 11px 15px;
 }
 
@@ -68,9 +69,9 @@ main {
 }
 
 .hero {
-  min-height: 680px;
-  padding-top: 112px;
-  padding-bottom: 110px;
+  min-height: 660px;
+  padding-top: 100px;
+  padding-bottom: 100px;
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
@@ -92,6 +93,7 @@ main {
   color: var(--muted);
   font-size: 0.67rem;
   letter-spacing: 0.8px;
+  background: #fff;
 }
 
 .status-dot {
@@ -99,14 +101,13 @@ main {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 10px #b4f47755;
+  background: #648b61;
 }
 
 .eyebrow {
   color: var(--accent);
   font-size: 0.72rem;
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
   font-weight: 700;
   margin-bottom: 24px;
 }
@@ -119,10 +120,11 @@ main {
 .hero h1,
 .section-heading h2,
 .contact h2 {
-  font-size: clamp(3.2rem, 7vw, 6rem);
-  line-height: 0.99;
-  letter-spacing: -5px;
-  font-weight: 750;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(3.2rem, 7vw, 5.8rem);
+  line-height: 1.04;
+  letter-spacing: -4px;
+  font-weight: 700;
 }
 
 .hero h1 span,
@@ -155,28 +157,29 @@ main {
   gap: 16px;
   min-height: 48px;
   padding: 0 19px;
-  border-radius: 6px;
+  border-radius: 5px;
   font-size: 0.85rem;
   font-weight: 700;
   transition: transform 0.2s ease, background 0.2s ease;
 }
 
 .button:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .button-primary {
-  color: #11150e;
-  background: var(--accent);
+  color: #ffffff;
+  background: #527653;
 }
 
 .button-primary:hover {
-  background: #c9ff9a;
+  background: #3f6040;
 }
 
 .button-secondary {
-  border: 1px solid var(--border);
+  border: 1px solid #d9ddd4;
   color: var(--text);
+  background: #fff;
 }
 
 .button-secondary:hover {
@@ -185,6 +188,7 @@ main {
 
 .hero-meta {
   display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   align-items: center;
   margin-top: 46px;
@@ -210,13 +214,13 @@ main {
   width: 290px;
   height: 290px;
   border-radius: 50%;
-  background: #a7f66b0b;
-  filter: blur(30px);
+  background: #e8eee3;
+  filter: blur(35px);
 }
 
 .orbit {
   position: absolute;
-  border: 1px solid #b5f47818;
+  border: 1px solid #dfe6da;
   border-radius: 50%;
 }
 
@@ -235,10 +239,10 @@ main {
   width: min(100%, 420px);
   position: relative;
   z-index: 1;
-  background: #141714;
-  border: 1px solid #303a2b;
-  border-radius: 12px;
-  box-shadow: 0 25px 100px #0008;
+  background: #ffffff;
+  border: 1px solid #e2e5dc;
+  border-radius: 9px;
+  box-shadow: 0 22px 60px #2838210d;
   transform: rotate(-2deg);
 }
 
@@ -253,11 +257,11 @@ main {
 }
 
 .code-card-header {
-  border-bottom: 1px solid #ffffff0c;
+  border-bottom: 1px solid #eceee8;
 }
 
 .code-card-footer {
-  border-top: 1px solid #ffffff0c;
+  border-top: 1px solid #eceee8;
 }
 
 .code-card-footer span:first-child {
@@ -274,20 +278,20 @@ main {
 .window-dots i {
   width: 8px;
   height: 8px;
-  background: #545a50;
+  background: #d1d5cc;
   border-radius: 50%;
 }
 
 .window-dots i:first-child {
-  background: #f17d74;
+  background: #d99b91;
 }
 
 .window-dots i:nth-child(2) {
-  background: #e6c36d;
+  background: #dfc17b;
 }
 
 .window-dots i:nth-child(3) {
-  background: #9bdb86;
+  background: #94b78b;
 }
 
 .code-body {
@@ -297,6 +301,7 @@ main {
   font-size: clamp(0.65rem, 1.3vw, 0.8rem);
   line-height: 2.15;
   white-space: nowrap;
+  color: #343a32;
 }
 
 .code-body p {
@@ -306,19 +311,19 @@ main {
 .line-number {
   display: inline-block;
   width: 24px;
-  color: #61685e;
+  color: #a1a69c;
 }
 
 .code-purple {
-  color: #c7a5ff;
+  color: #845ba8;
 }
 
 .code-green {
-  color: #b5ed8a;
+  color: #3c7846;
 }
 
 .code-yellow {
-  color: #e8cf88;
+  color: #99752b;
 }
 
 .cursor {
@@ -337,10 +342,10 @@ main {
   z-index: 2;
   padding: 12px 15px;
   border: 1px solid var(--border);
-  background: #191e18;
-  border-radius: 8px;
+  background: #ffffff;
+  border-radius: 6px;
   font-size: 0.75rem;
-  box-shadow: 0 10px 35px #0005;
+  box-shadow: 0 8px 25px #2838210a;
 }
 
 .tag-top {
@@ -356,7 +361,7 @@ main {
 
 .scroll-indicator {
   position: absolute;
-  bottom: 28px;
+  bottom: 25px;
   left: 0;
   display: flex;
   align-items: center;
@@ -374,9 +379,10 @@ main {
 
 .about,
 .projects,
-.skills {
-  padding-top: 110px;
-  padding-bottom: 110px;
+.skills,
+.contact {
+  padding-top: 100px;
+  padding-bottom: 100px;
   border-top: 1px solid var(--border);
 }
 
@@ -390,7 +396,7 @@ main {
 .contact h2 {
   font-size: clamp(2.5rem, 5vw, 4rem);
   letter-spacing: -2.5px;
-  line-height: 1.08;
+  line-height: 1.1;
 }
 
 .about-content>p {
@@ -403,11 +409,11 @@ main {
   display: flex;
   align-items: flex-start;
   gap: 14px;
-  margin-top: 24px;
+  margin-top: 20px;
   padding: 17px;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface);
+  border-radius: 7px;
+  background: #fafbf8;
 }
 
 .education-icon {
@@ -435,7 +441,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 18px;
-  margin-top: 48px;
+  margin-top: 45px;
 }
 
 .project-card {
@@ -443,15 +449,15 @@ main {
   flex-direction: column;
   min-height: 390px;
   padding: 24px;
-  background: var(--surface);
+  background: #ffffff;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
 .project-card:hover {
-  border-color: #b5f47865;
-  transform: translateY(-5px);
+  border-color: #8ba488;
+  transform: translateY(-4px);
 }
 
 .project-top {
@@ -472,15 +478,16 @@ main {
 }
 
 .project-type {
-  margin-top: 38px;
+  margin-top: 36px;
   color: var(--muted);
   font-size: 0.63rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   line-height: 1.7;
 }
 
 .project-card h3 {
   margin-top: 10px;
+  font-family: "Manrope", sans-serif;
   font-size: 1.7rem;
   letter-spacing: -0.8px;
 }
@@ -501,7 +508,8 @@ main {
 
 .tech-list span {
   border: 1px solid var(--border);
-  color: #c3c9bd;
+  color: #53594f;
+  background: #fafbf8;
   padding: 6px 9px;
   border-radius: 4px;
   font-size: 0.68rem;
@@ -523,6 +531,7 @@ main {
 
 .project-note a {
   color: var(--accent);
+  font-weight: 600;
 }
 
 .skills-grid {
@@ -534,9 +543,9 @@ main {
 
 .skill-card {
   padding: 24px;
-  background: var(--surface);
+  background: #fafbf8;
   border: 1px solid var(--border);
-  border-radius: 8px;
+  border-radius: 7px;
 }
 
 .skill-card h3 {
@@ -547,10 +556,10 @@ main {
 .achievement-strip {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  margin-top: 45px;
+  margin-top: 40px;
   border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--surface);
+  border-radius: 7px;
+  background: #fafbf8;
 }
 
 .achievement-strip>div {
@@ -566,19 +575,13 @@ main {
 
 .achievement-strip strong {
   color: var(--accent);
-  font-size: 1.15rem;
+  font-size: 1.1rem;
 }
 
 .achievement-strip span {
   color: var(--muted);
   font-size: 0.76rem;
   line-height: 1.6;
-}
-
-.contact {
-  padding-top: 110px;
-  padding-bottom: 110px;
-  border-top: 1px solid var(--border);
 }
 
 .contact h2 {
@@ -593,7 +596,7 @@ main {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
-  margin-top: 48px;
+  margin-top: 45px;
   color: var(--muted);
   font-size: 0.84rem;
 }
@@ -668,8 +671,8 @@ main {
 
   .hero {
     min-height: auto;
-    padding-top: 76px;
-    padding-bottom: 105px;
+    padding-top: 70px;
+    padding-bottom: 100px;
   }
 
   .hero h1 {
@@ -705,16 +708,7 @@ main {
     padding: 10px;
   }
 
-  .tag-top {
-    right: -2px;
-  }
-
-  .tag-bottom {
-    left: -2px;
-  }
-
   .hero-meta {
-    flex-wrap: wrap;
     font-size: 0.58rem;
   }
 
@@ -722,12 +716,12 @@ main {
   .projects,
   .skills,
   .contact {
-    padding-top: 78px;
-    padding-bottom: 78px;
+    padding-top: 75px;
+    padding-bottom: 75px;
   }
 
   .section-heading h2 {
-    font-size: 2.8rem;
+    font-size: 2.7rem;
     letter-spacing: -2px;
   }
 
