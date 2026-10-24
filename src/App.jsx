@@ -1,4 +1,3 @@
-
 import "./App.css";
 
 const projects = [
@@ -10,6 +9,7 @@ const projects = [
       "A job and internship portal connecting students with opportunities, featuring authentication, recruiter workflows, and role-based access control.",
     tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "REST APIs"],
     result: "Built for students, recruiters, and admins",
+    repo: "",
   },
   {
     number: "02",
@@ -19,6 +19,7 @@ const projects = [
       "A quiz management application with CRUD APIs, secure sessions, search functionality, and performance tracking backed by a relational database.",
     tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
     result: "Designed to support 100+ concurrent users",
+    repo: "",
   },
   {
     number: "03",
@@ -28,6 +29,7 @@ const projects = [
       "An AI-powered predictive maintenance system using an LSTM model to identify machine failure patterns and estimate remaining useful life.",
     tech: ["Python", "LSTM", "Machine Learning"],
     result: "85% prediction accuracy · 1st place at SVIT HackVerse 2K26",
+    repo: "",
   },
 ];
 
@@ -63,7 +65,7 @@ function App() {
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#contact" className="nav-cta">
-            Let's connect <span>↗</span>
+            Let&apos;s connect <span>↗</span>
           </a>
         </div>
       </nav>
@@ -75,7 +77,8 @@ function App() {
             OPEN TO DEVELOPER OPPORTUNITIES
           </div>
 
-          <p className="eyebrow">HELLO, I'M</p>
+          <p className="eyebrow">HELLO, I&apos;M</p>
+
           <h1>
             Bhushan
             <br />
@@ -83,9 +86,9 @@ function App() {
           </h1>
 
           <p className="hero-description">
-            Developer who enjoys building useful web applications,
-            solving problems, and exploring the intersection of software
-            engineering and data science.
+            Developer who enjoys building useful web applications, solving
+            problems, and exploring the intersection of software engineering and
+            data science.
           </p>
 
           <div className="hero-actions">
@@ -105,38 +108,26 @@ function App() {
         </div>
 
         <div className="hero-visual">
-          <div className="visual-glow" />
-          <div className="orbit orbit-one" />
-          <div className="orbit orbit-two" />
+          <div className="photo-frame">
+            <img
+              src="/profile.jpg"
+              alt="Bhushan Sonawane"
+              className="profile-photo"
+            />
 
-          <div className="code-card">
-            <div className="code-card-header">
-              <div className="window-dots">
-                <i />
-                <i />
-                <i />
-              </div>
-              <span>developer.py</span>
-            </div>
-
-            <div className="code-body">
-              <p><span className="line-number">01</span> <span className="code-purple">class</span> <span className="code-green">Developer</span>:</p>
-              <p><span className="line-number">02</span> &nbsp;&nbsp;name = <span className="code-yellow">"Bhushan"</span></p>
-              <p><span className="line-number">03</span> &nbsp;&nbsp;focus = [</p>
-              <p><span className="line-number">04</span> &nbsp;&nbsp;&nbsp;&nbsp;<span className="code-yellow">"Full-stack"</span>,</p>
-              <p><span className="line-number">05</span> &nbsp;&nbsp;&nbsp;&nbsp;<span className="code-yellow">"Data science"</span></p>
-              <p><span className="line-number">06</span> &nbsp;&nbsp;]</p>
-              <p><span className="line-number">07</span> &nbsp;&nbsp;build( <span className="code-green">ideas</span> )<span className="cursor">_</span></p>
-            </div>
-
-            <div className="code-card-footer">
-              <span><span className="status-dot" /> Available to build</span>
-              <span>UTF-8</span>
+            <div className="photo-caption">
+              <span className="status-dot" />
+              <span>Developer · Problem Solver</span>
             </div>
           </div>
 
-          <div className="floating-tag tag-top">{"{ }"} Clean code</div>
-          <div className="floating-tag tag-bottom">✳ Always learning</div>
+          <span className="photo-decoration photo-decoration-top">
+            Python · React
+          </span>
+
+          <span className="photo-decoration photo-decoration-bottom">
+            Building useful things.
+          </span>
         </div>
 
         <a href="#about" className="scroll-indicator">
@@ -156,15 +147,16 @@ function App() {
 
         <div className="about-content">
           <p>
-            I'm a developer and a Data Science student at IIT Madras,
-            interested in building reliable applications from the database
-            to the user interface.
+            I&apos;m a developer and a Data Science student at IIT Madras,
+            interested in building reliable applications from the database to
+            the user interface.
           </p>
+
           <p>
             My experience includes Python, Flask, REST API development,
-            authentication, database design, and applied machine learning.
-            I enjoy learning by building projects and working with a team
-            to solve real problems.
+            authentication, database design, and applied machine learning. I
+            enjoy learning by building projects and working with a team to solve
+            real problems.
           </p>
 
           <div className="education-card">
@@ -178,8 +170,10 @@ function App() {
           <div className="education-card">
             <span className="education-icon">✳</span>
             <div>
-              <strong>SND College of Engineering & Research Centre</strong>
-              <p>Bachelor of Engineering · Information Technology · Expected 2028</p>
+              <strong>SND College of Engineering &amp; Research Centre</strong>
+              <p>
+                Bachelor of Engineering · Information Technology · Expected 2028
+              </p>
             </div>
           </div>
         </div>
@@ -189,13 +183,13 @@ function App() {
         <div className="section-heading">
           <p className="eyebrow">02 / SELECTED WORK</p>
           <h2>
-            Projects I've
+            Projects I&apos;ve
             <br />
-            <span>built & explored.</span>
+            <span>built &amp; explored.</span>
           </h2>
           <p className="section-description">
-            A selection of applications and ideas that reflect my
-            interest in backend development and machine learning.
+            A selection of applications and ideas that reflect my interest in
+            backend development and machine learning.
           </p>
         </div>
 
@@ -218,18 +212,35 @@ function App() {
               </div>
 
               <div className="project-result">{project.result}</div>
+
+              <div className="project-links">
+                {project.repo ? (
+                  <a
+                    className="project-link"
+                    href={project.repo}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View source <span>↗</span>
+                  </a>
+                ) : (
+                  <span className="project-link-placeholder">
+                    Repository link to be added
+                  </span>
+                )}
+              </div>
             </article>
           ))}
         </div>
 
         <p className="project-note">
-          Want to explore the code?{" "}
+          Explore more on{" "}
           <a
             href="https://github.com/bhushan-ssh"
             target="_blank"
             rel="noreferrer"
           >
-            Visit my GitHub profile ↗
+            my GitHub profile ↗
           </a>
         </p>
       </section>
@@ -267,21 +278,22 @@ function App() {
             <span>SVIT HackVerse 2K26</span>
           </div>
           <div>
-            <strong>SQL & Java</strong>
+            <strong>SQL &amp; Java</strong>
             <span>HackerRank certifications</span>
           </div>
         </div>
       </section>
 
       <section className="contact section" id="contact">
-        <p className="eyebrow">04 / WHAT'S NEXT?</p>
+        <p className="eyebrow">04 / WHAT&apos;S NEXT?</p>
         <h2>
           Have an idea?
           <br />
-          <span>Let's build it.</span>
+          <span>Let&apos;s build it.</span>
         </h2>
+
         <p className="contact-description">
-          I'm interested in connecting with developers, collaborating on
+          I&apos;m interested in connecting with developers, collaborating on
           projects, and exploring internship opportunities.
         </p>
 
@@ -307,9 +319,7 @@ function App() {
           >
             LinkedIn ↗
           </a>
-          <a href="mailto:bhushan.sonawane.tech@gmail.com">
-            Email ↗
-          </a>
+          <a href="mailto:bhushan.sonawane.tech@gmail.com">Email ↗</a>
         </div>
       </section>
 
@@ -317,7 +327,7 @@ function App() {
         <a className="brand" href="#home">
           bhushan<span>.</span>
         </a>
-        <p>Designed & built with React.</p>
+        <p>Designed &amp; built with React.</p>
         <a href="#home">Back to top ↑</a>
       </footer>
     </main>

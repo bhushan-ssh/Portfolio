@@ -1014,3 +1014,164 @@ main {
     grid-template-columns: 1fr;
   }
 }
+
+/* ===== Personal photo ===== */
+
+.photo-frame {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 370px);
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 18px 50px rgba(37, 42, 35, 0.08);
+  transform: rotate(-1deg);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.photo-frame:hover {
+  transform: rotate(0) translateY(-3px);
+  box-shadow: 0 24px 55px rgba(37, 42, 35, 0.12);
+}
+
+.profile-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 9px;
+  background: var(--surface);
+}
+
+.photo-caption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 5px 5px;
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+
+.photo-decoration {
+  position: absolute;
+  z-index: 2;
+  padding: 11px 14px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  box-shadow: 0 8px 24px rgba(37, 42, 35, 0.06);
+  font-size: 0.74rem;
+}
+
+.photo-decoration-top {
+  top: 42px;
+  right: 0;
+  color: var(--accent);
+}
+
+.photo-decoration-bottom {
+  bottom: 38px;
+  left: 0;
+  color: var(--text);
+}
+
+/* ===== Project card links ===== */
+
+.project-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--accent);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.project-link:hover {
+  color: #344f35;
+  gap: 12px;
+}
+
+.project-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 3px;
+}
+
+/* ===== Smooth, restrained interactions ===== */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 24px;
+}
+
+.nav-links a,
+.button,
+.project-card,
+.skill-card {
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Keep the photo within the layout on smaller screens */
+
+@media (max-width: 900px) {
+  .hero-visual {
+    min-height: 330px;
+  }
+
+  .photo-frame {
+    width: min(100%, 330px);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-visual {
+    min-height: 300px;
+  }
+
+  .photo-frame {
+    width: min(78%, 290px);
+  }
+
+  .photo-decoration-top {
+    right: -4px;
+    top: 28px;
+  }
+
+  .photo-decoration-bottom {
+    left: -4px;
+    bottom: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
