@@ -9,12 +9,12 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --bg: #ffffff;
-  --surface: #f7f8f5;
-  --text: #242820;
-  --muted: #73786f;
+--bg: #fdfdfb;
+  --surface: #f6f8f3;
+  --text: #252a23;
+  --muted: #73796f;
   --accent: #527653;
-  --border: #e7e9e3;
+  --border: #e6e9e1;
 }
 
 * {
@@ -48,3 +48,4 @@ textarea {
   background: #dce8d8;
   color: #242820;
 }
+
