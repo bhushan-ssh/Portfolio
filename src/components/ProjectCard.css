@@ -2,7 +2,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--white);
+  background: var(--card-mint);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -11,6 +11,9 @@
     box-shadow 0.25s;
   min-width: 0;
 }
+.project-card:nth-child(4n + 2) { background: var(--card-blue); }
+.project-card:nth-child(4n + 3) { background: var(--card-peach); }
+.project-card:nth-child(4n) { background: var(--card-lilac); }
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
@@ -65,6 +68,7 @@
   flex-direction: column;
   flex: 1;
 }
+.project-body { background: inherit; }
 .project-meta {
   display: flex;
   flex-wrap: wrap;

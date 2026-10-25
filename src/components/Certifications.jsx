@@ -68,7 +68,7 @@ export default function Certifications() {
           </a>
         </div>
         <div className="certificate-grid" id="certificate-list">
-          {(expanded ? certifications : certifications.slice(0, 6)).map(
+          {(expanded ? certifications : certifications.slice(0, 7)).map(
             (certificate) => (
               <CertificateCard certificate={certificate} key={certificate.id} />
             ),
