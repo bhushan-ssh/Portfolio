@@ -1,0 +1,56 @@
+.education {
+  margin-top: 32px;
+}
+.education-timeline {
+  padding: 0 0 0 24px;
+  list-style: none;
+  border-left: 1px solid var(--border);
+  margin: 24px 0 0 4px;
+}
+.education-timeline li {
+  position: relative;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  margin-bottom: 16px;
+}
+.education-timeline li::before {
+  content: "";
+  position: absolute;
+  top: 26px;
+  left: -30px;
+  width: 9px;
+  height: 9px;
+  background: var(--accent);
+  border: 3px solid white;
+  box-sizing: content-box;
+  border-radius: 50%;
+}
+.education-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.education-monogram {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+  letter-spacing: 0.1em;
+}
+.education-date {
+  font-size: 0.67rem;
+  color: var(--muted);
+}
+.education h4 {
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.education li p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-top: 6px;
+}

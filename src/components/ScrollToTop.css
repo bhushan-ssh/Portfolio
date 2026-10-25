@@ -1,0 +1,16 @@
+.scroll-top {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 20;
+  background: var(--white) !important;
+  border: 1px solid var(--border-strong) !important;
+  box-shadow: var(--shadow-sm);
+  color: var(--accent);
+}
+@media (max-width: 550px) {
+  .scroll-top {
+    bottom: 16px;
+    right: 16px;
+  }
+}
