@@ -1,0 +1,33 @@
+export const projects = [
+  {
+    id: 'uptime', title: 'Uptime', category: 'Machine Learning', featured: true,
+    subtitle: 'AI-powered predictive maintenance',
+    description: 'A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.',
+    tech: ['Python', 'Machine Learning', 'LSTM'],
+    result: '85% accuracy · 1st place at SVIT HackVerse 2K26',
+    detail: 'Led a 4-person team to turn machine sensor data into maintenance insights.',
+    repo: 'https://github.com/bhushan-ssh/Uptime',
+    image: 'projects/uptime.webp', width: 1117, height: 613,
+    alt: 'Uptime predictive maintenance preview showing a remaining useful life graph and failure mode insights',
+  },
+  {
+    id: 'careerlink', title: 'CareerLink', category: 'Web',
+    subtitle: 'Connecting students with opportunities',
+    description: 'A career platform connecting students with opportunities, featuring role-based access and REST APIs.',
+    tech: ['Python', 'Flask', 'SQLAlchemy', 'SQLite', 'REST API'],
+    result: 'Designed to connect 500+ students',
+    repo: 'https://github.com/bhushan-ssh/CareerLink',
+    image: 'projects/careerlink.webp', width: 1440, height: 681,
+    alt: 'CareerLink home page with a job search form and student career profile',
+  },
+  {
+    id: 'quizmaster', title: 'QuizMaster', category: 'Web',
+    subtitle: 'A better way to manage quizzes',
+    description: 'A quiz management application with CRUD functionality, session handling, and role-based access control.',
+    tech: ['Python', 'Flask', 'SQLAlchemy', 'SQLite'],
+    result: 'Built to support 100+ concurrent users',
+    repo: 'https://github.com/bhushan-ssh/Quizmaster',
+    image: 'projects/quizmaster.webp', width: 1440, height: 684,
+    alt: 'QuizMaster welcome screen with the quiz logo and login button',
+  },
+]
