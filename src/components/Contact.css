@@ -47,7 +47,7 @@
 }
 .contact-form {
   border: 1px solid var(--border);
-  background: var(--white);
+  background: var(--card-peach);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
   padding: 32px;

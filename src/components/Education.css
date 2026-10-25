@@ -12,9 +12,11 @@
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: var(--surface);
+  background: var(--card-blue);
   margin-bottom: 16px;
 }
+.education-timeline li:nth-child(3n + 2) { background: var(--card-mint); }
+.education-timeline li:nth-child(3n) { background: var(--card-lilac); }
 .education-timeline li::before {
   content: "";
   position: absolute;
