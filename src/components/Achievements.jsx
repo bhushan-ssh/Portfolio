@@ -31,7 +31,8 @@ function Counter({ item }) {
     };
   }, [item.count]);
   return (
-    <strong ref={ref} aria-label={item.value}>
+    <strong ref={ref}>
+      <span className="sr-only">{item.value}</span>
       <span aria-hidden="true">{item.count ? `${count}+` : item.value}</span>
     </strong>
   );

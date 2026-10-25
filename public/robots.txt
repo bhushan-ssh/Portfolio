@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace this placeholder before publishing.
+Sitemap: https://example.com/sitemap.xml

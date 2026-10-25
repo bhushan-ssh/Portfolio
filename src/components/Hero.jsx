@@ -65,9 +65,11 @@ export default function Hero() {
         <div className="portrait-grid" aria-hidden="true" />
         <div className="photo-frame">
           <img
-            src={asset("profile.webp")}
-            width="810"
-            height="1440"
+            src={asset("profile-800.webp")}
+            srcSet={`${asset("profile-400.webp")} 400w, ${asset("profile-600.webp")} 600w, ${asset("profile-800.webp")} 800w`}
+            sizes="(max-width: 420px) 280px, (max-width: 1100px) 310px, 365px"
+            width="800"
+            height="1000"
             alt="Bhushan Sonawane outdoors"
             fetchPriority="high"
             loading="eager"

@@ -60,7 +60,11 @@ export default function Contact() {
       });
       if (!response.ok) throw new Error("Submission failed");
       const result = await response.json();
-      if (result.ok !== true && result.success !== true)
+      if (
+        result.ok === false ||
+        result.success === false ||
+        result.errors?.length
+      )
         throw new Error("Submission not confirmed");
       setStatus("success");
       setFeedback("Thanks for reaching out! Your message has been sent.");

@@ -67,7 +67,7 @@ export default function Navbar() {
     </>
   );
   return (
-    <header className="site-header" id="top">
+    <header className="site-header">
       <div className="navbar container">
         <a className="brand" href="#home" aria-label="Bhushan — home">
           bhushan<span>.</span>

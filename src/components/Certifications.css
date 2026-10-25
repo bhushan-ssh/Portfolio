@@ -24,6 +24,7 @@
   box-shadow: var(--shadow-lg);
 }
 .certificate-preview {
+  overflow: hidden;
   height: 180px;
   background: #f1f3ee;
   display: grid;
@@ -33,6 +34,8 @@
   color: var(--accent);
 }
 .certificate-preview img {
+  min-height: 0;
+  max-height: 148px;
   height: 100%;
   width: 100%;
   object-fit: contain;

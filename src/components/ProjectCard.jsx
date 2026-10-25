@@ -21,6 +21,8 @@ export default function ProjectCard({ project, onPreview }) {
         ) : (
           <img
             src={asset(project.image)}
+            srcSet={`${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`}
+            sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"
             alt={project.alt}
             width={project.width}
             height={project.height}
