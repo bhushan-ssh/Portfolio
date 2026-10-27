@@ -59,9 +59,10 @@ export const projects = [
     detail:
       "Combines XGBoost and CatBoost predictions with non-negative least-squares blending.",
     repo: "https://github.com/bhushan-ssh/Heavy_Equipment_Selling_Price_Prediction",
-    visualIcon: "database",
-    visualTitle: "HEAVY EQUIPMENT",
-    visualDetail: "PRICE MODEL · 0.20217 OOF RMSLE",
+    image: "projects/heavy_equipement_price_prediction.jpg",
+    width: 800,
+    height: 766,
+    alt: "Heavy equipment selling price prediction project preview",
   },
   {
     id: "titanic-survival-prediction",
@@ -74,9 +75,10 @@ export const projects = [
     result: "81.56% validation accuracy",
     repo: "https://github.com/bhushan-ssh/Titanic_Survival_Prediction",
     demo: "https://bhushan-titanic-ml.streamlit.app/",
-    visualIcon: "sparkles",
-    visualTitle: "TITANIC SURVIVAL",
-    visualDetail: "LOGISTIC REGRESSION · 81.56% ACCURACY",
+    image: "projects/titatic_survival_prediction.jpg",
+    width: 1280,
+    height: 853,
+    alt: "Titanic survival prediction project preview",
   },
   {
     id: "smart-mcq-solver",
@@ -90,8 +92,9 @@ export const projects = [
     detail:
       "A weighted ensemble combines neural models for top-three answer ranking.",
     repo: "https://github.com/bhushan-ssh/Smart_MCQ_Solver",
-    visualIcon: "code",
-    visualTitle: "SMART MCQ SOLVER",
-    visualDetail: "BERT ENSEMBLE · MAP@3 0.7503",
+    image: "projects/smart_mcq_solver.jpg",
+    width: 1280,
+    height: 720,
+    alt: "Smart MCQ Solver project preview",
   },
 ];
