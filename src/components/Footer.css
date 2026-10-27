@@ -12,10 +12,6 @@
   color: var(--muted);
   font-size: 0.8rem;
 }
-.social-links {
-  display: flex;
-  gap: 6px;
-}
 .footer-bottom {
   border-top: 1px solid var(--border);
   margin-top: 24px;
@@ -35,8 +31,5 @@
   .footer-top > p {
     order: 3;
     width: 100%;
-  }
-  .footer-bottom > p:nth-child(2) {
-    display: none;
   }
 }

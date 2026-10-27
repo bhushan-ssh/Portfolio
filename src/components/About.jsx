@@ -6,10 +6,10 @@ export default function About() {
   return (
     <section
       id="about"
-      className="section container reveal"
+      className="section section-band about-section reveal"
       aria-label="About me"
     >
-      <div className="about-grid">
+      <div className="container about-grid">
         <div>
           <SectionHeading
             number="01"

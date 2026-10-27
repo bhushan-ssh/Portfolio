@@ -70,7 +70,7 @@ export default function Navbar() {
     <header className="site-header">
       <div className="navbar container">
         <a className="brand" href="#home" aria-label="Bhushan — home">
-          bhushan<span>.</span>
+          bhushan<span>.ssh</span>
         </a>
         <nav className="desktop-nav" aria-label="Main navigation">
           {navLinks}

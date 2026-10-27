@@ -41,24 +41,26 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="section container reveal"
+      className="section section-band achievements-section reveal"
       aria-label="Achievements"
     >
-      <SectionHeading
-        number="05"
-        label="MILESTONES"
-        title="Small steps."
-        accent="Meaningful progress."
-      />
-      <div className="achievement-strip">
-        {achievements.map((item) => (
-          <div key={item.label}>
-            <Icon name={item.icon} size={24} />
-            <Counter item={item} />
-            <h3>{item.label}</h3>
-            <p>{item.detail}</p>
-          </div>
-        ))}
+      <div className="container">
+        <SectionHeading
+          number="05"
+          label="MILESTONES"
+          title="Small steps."
+          accent="Meaningful progress."
+        />
+        <div className="achievement-strip">
+          {achievements.map((item) => (
+            <div key={item.label}>
+              <Icon name={item.icon} size={24} />
+              <Counter item={item} />
+              <h3>{item.label}</h3>
+              <p>{item.detail}</p>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
