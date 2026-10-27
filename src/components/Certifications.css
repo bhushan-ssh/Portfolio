@@ -1,5 +1,5 @@
 .certificates-section {
-  background: var(--surface);
+  background: var(--section-certificates);
   border-block: 1px solid var(--border);
 }
 .certificate-grid {

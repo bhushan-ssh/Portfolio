@@ -1,5 +1,5 @@
 .projects-section {
-  background: var(--surface);
+  background: var(--section-projects);
   border-block: 1px solid var(--border);
 }
 .projects-section .section-heading {

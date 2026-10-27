@@ -3,6 +3,7 @@
   grid-template-columns: 1.1fr 1fr;
   column-gap: 64px;
   padding-top: 80px;
+  --section-background: var(--section-hero);
 }
 .hero-content {
   padding-top: 8px;

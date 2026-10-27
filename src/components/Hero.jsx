@@ -20,7 +20,11 @@ export default function Hero() {
     };
   }, []);
   return (
-    <section className="hero container" id="home" aria-labelledby="hero-title">
+    <section
+      className="hero section-band hero-section container"
+      id="home"
+      aria-labelledby="hero-title"
+    >
       <div className="hero-content">
         <div className="availability">
           <span className="status-dot" /> OPEN TO DEVELOPER OPPORTUNITIES

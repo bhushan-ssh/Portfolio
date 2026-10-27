@@ -75,6 +75,19 @@ main:focus {
 .section {
   padding-block: var(--space-12);
 }
+.section-band {
+  position: relative;
+  isolation: isolate;
+}
+.section-band::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset-block: 0;
+  left: calc((100% - 100vw) / 2);
+  right: calc((100% - 100vw) / 2);
+  background: var(--section-background, var(--white));
+}
 .eyebrow,
 .small-label {
   font-size: 0.65rem;
