@@ -37,14 +37,9 @@
   text-align: center;
   color: var(--accent-hover);
 }
-.project-placeholder.heavy-equipment-price-prediction {
-  background: linear-gradient(135deg, #eaf3ec, #f7f3e9);
-}
-.project-placeholder.titanic-survival-prediction {
-  background: linear-gradient(135deg, #e9f2f8, #f4f1e9);
-}
-.project-placeholder.smart-mcq-solver {
-  background: linear-gradient(135deg, #f0ebf7, #eaf3f2);
+.project-image.heavy-equipment-price-prediction img {
+  object-fit: contain;
+  background: #f3f6f1;
 }
 .placeholder-icon {
   display: grid;

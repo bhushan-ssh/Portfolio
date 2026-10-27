@@ -8,7 +8,7 @@ export default function ProjectCard({ project, onPreview }) {
     <article className={`project-card ${project.featured ? "featured" : ""}`}>
       {project.image ? (
         <button
-          className="project-image"
+          className={`project-image ${project.id}`}
           aria-label={`View ${project.title} screenshot`}
           disabled={failed}
           onClick={() => onPreview(project)}
@@ -22,7 +22,11 @@ export default function ProjectCard({ project, onPreview }) {
           ) : (
             <img
               src={asset(project.image)}
-              srcSet={`${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`}
+              srcSet={
+                project.image.endsWith(".webp")
+                  ? `${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`
+                  : undefined
+              }
               sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"
               alt={project.alt}
               width={project.width}
