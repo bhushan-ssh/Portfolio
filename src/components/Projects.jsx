@@ -46,7 +46,7 @@ export default function Projects() {
               onClick={() => setFilter(item)}
             >
               {item}
-              {item === "All" && <span>03</span>}
+              {item === "All" && <span>{projects.length}</span>}
             </button>
           ))}
         </div>

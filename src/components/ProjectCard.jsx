@@ -6,35 +6,48 @@ export default function ProjectCard({ project, onPreview }) {
   const [failed, setFailed] = useState(false);
   return (
     <article className={`project-card ${project.featured ? "featured" : ""}`}>
-      <button
-        className="project-image"
-        aria-label={`View ${project.title} screenshot`}
-        disabled={failed}
-        onClick={() => onPreview(project)}
-      >
-        {failed ? (
-          <span className="image-fallback">
-            <Icon name="code" size={40} />
-            {project.title}
-            <small>Screenshot unavailable · explore the source below</small>
+      {project.image ? (
+        <button
+          className="project-image"
+          aria-label={`View ${project.title} screenshot`}
+          disabled={failed}
+          onClick={() => onPreview(project)}
+        >
+          {failed ? (
+            <span className="image-fallback">
+              <Icon name="code" size={40} />
+              {project.title}
+              <small>Screenshot unavailable · explore the source below</small>
+            </span>
+          ) : (
+            <img
+              src={asset(project.image)}
+              srcSet={`${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`}
+              sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"
+              alt={project.alt}
+              width={project.width}
+              height={project.height}
+              loading="lazy"
+              onError={() => setFailed(true)}
+            />
+          )}
+          <span className="expand-hint">
+            <Icon name="expand" size={16} />
+            <span>View screenshot</span>
           </span>
-        ) : (
-          <img
-            src={asset(project.image)}
-            srcSet={`${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`}
-            sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"
-            alt={project.alt}
-            width={project.width}
-            height={project.height}
-            loading="lazy"
-            onError={() => setFailed(true)}
-          />
-        )}
-        <span className="expand-hint">
-          <Icon name="expand" size={16} />
-          <span>View screenshot</span>
-        </span>
-      </button>
+        </button>
+      ) : (
+        <div
+          className={`project-image project-placeholder ${project.id}`}
+          aria-hidden="true"
+        >
+          <span className="placeholder-icon">
+            <Icon name={project.visualIcon} size={40} />
+          </span>
+          <strong>{project.visualTitle}</strong>
+          <small>{project.visualDetail}</small>
+        </div>
+      )}
       <div className="project-body">
         <div className="project-meta">
           <span className="small-label">{project.category}</span>

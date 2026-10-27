@@ -47,4 +47,51 @@ export const projects = [
     height: 684,
     alt: "QuizMaster welcome screen with the quiz logo and login button",
   },
+  {
+    id: "heavy-equipment-price-prediction",
+    title: "Heavy Equipment Price Prediction",
+    category: "Machine Learning",
+    subtitle: "Predicting used equipment selling prices",
+    description:
+      "An end-to-end regression pipeline that estimates resale prices from equipment specifications, usage, and transaction data.",
+    tech: ["Python", "Pandas", "XGBoost", "CatBoost", "scikit-learn"],
+    result: "0.20217 OOF RMSLE · 5-fold ensemble",
+    detail:
+      "Combines XGBoost and CatBoost predictions with non-negative least-squares blending.",
+    repo: "https://github.com/bhushan-ssh/Heavy_Equipment_Selling_Price_Prediction",
+    visualIcon: "database",
+    visualTitle: "HEAVY EQUIPMENT",
+    visualDetail: "PRICE MODEL · 0.20217 OOF RMSLE",
+  },
+  {
+    id: "titanic-survival-prediction",
+    title: "Titanic Survival Prediction",
+    category: "Machine Learning",
+    subtitle: "An interactive passenger survival predictor",
+    description:
+      "A classification workflow with exploratory analysis, feature engineering, model comparison, and an interactive Streamlit app.",
+    tech: ["Python", "Pandas", "scikit-learn", "Streamlit"],
+    result: "81.56% validation accuracy",
+    repo: "https://github.com/bhushan-ssh/Titanic_Survival_Prediction",
+    demo: "https://bhushan-titanic-ml.streamlit.app/",
+    visualIcon: "sparkles",
+    visualTitle: "TITANIC SURVIVAL",
+    visualDetail: "LOGISTIC REGRESSION · 81.56% ACCURACY",
+  },
+  {
+    id: "smart-mcq-solver",
+    title: "Smart MCQ Solver",
+    category: "Machine Learning",
+    subtitle: "Deep learning for multiple-choice questions",
+    description:
+      "Compares BiLSTM, BiGRU with attention, and fine-tuned BERT to rank the top three answers for each question.",
+    tech: ["Python", "PyTorch", "BERT", "Transformers", "Streamlit"],
+    result: "0.7503 validation MAP@3 ensemble",
+    detail:
+      "A weighted ensemble combines neural models for top-three answer ranking.",
+    repo: "https://github.com/bhushan-ssh/Smart_MCQ_Solver",
+    visualIcon: "code",
+    visualTitle: "SMART MCQ SOLVER",
+    visualDetail: "BERT ENSEMBLE · MAP@3 0.7503",
+  },
 ];
