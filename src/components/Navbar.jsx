@@ -7,6 +7,7 @@ const links = [
   ["projects", "Projects"],
   ["skills", "Skills"],
   ["certifications", "Certifications"],
+  ["achievements", "Achievements"],
 ];
 export default function Navbar() {
   const [open, setOpen] = useState(false);
