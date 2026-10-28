@@ -1,24 +1,7 @@
-import { useEffect, useState } from "react";
 import Icon from "./Icon";
 import { asset } from "../data/assets";
 import "./Hero.css";
 export default function Hero() {
-  const [role, setRole] = useState(0);
-  useEffect(() => {
-    const query = window.matchMedia("(prefers-reduced-motion: reduce)");
-    let timer;
-    const configure = () => {
-      clearInterval(timer);
-      if (!query.matches)
-        timer = setInterval(() => setRole((value) => 1 - value), 4000);
-    };
-    configure();
-    query.addEventListener("change", configure);
-    return () => {
-      clearInterval(timer);
-      query.removeEventListener("change", configure);
-    };
-  }, []);
   return (
     <section
       className="hero section-band hero-section container"
@@ -37,17 +20,10 @@ export default function Hero() {
         </h1>
         <div className="role-line">
           <span aria-hidden="true" className="role-dash" />
-          <span className="sr-only">
-            Full-Stack Developer and Data Science Student
-          </span>
-          <span aria-hidden="true" key={role} className="role-text">
-            {["Full-Stack Developer", "Data Science Student"][role]}
-          </span>
+          <span>Full-Stack Developer · Data Science Student</span>
         </div>
         <p className="hero-description">
-          Developer who enjoys building useful web applications, solving
-          problems, and exploring the intersection of software engineering and
-          data science.
+          Building data-driven web apps and practical machine-learning systems.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">
