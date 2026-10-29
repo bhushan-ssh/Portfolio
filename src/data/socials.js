@@ -1,4 +1,4 @@
-export const email = "bhushan.sonawane.tech@gmail.com";
+const email = "bhushan.sonawane.tech@gmail.com";
 export const socials = [
   { name: "GitHub", href: "https://github.com/bhushan-ssh/", icon: "github" },
   {

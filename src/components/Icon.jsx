@@ -14,13 +14,9 @@ import {
   GraduationCap,
   Menu,
   X,
-  Copy,
   Check,
-  Send,
-  LoaderCircle,
   Expand,
   Sparkles,
-  FileText,
   ChevronDown,
 } from "lucide-react";
 const icons = {
@@ -39,13 +35,9 @@ const icons = {
   education: GraduationCap,
   menu: Menu,
   close: X,
-  copy: Copy,
   check: Check,
-  send: Send,
-  loading: LoaderCircle,
   expand: Expand,
   sparkles: Sparkles,
-  file: FileText,
   chevron: ChevronDown,
 };
 export default function Icon({ name, size = 18, ...props }) {

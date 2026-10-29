@@ -25,39 +25,9 @@
   aspect-ratio: 1.9;
   overflow: hidden;
 }
-.project-placeholder {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  text-align: center;
-  color: var(--accent-hover);
-}
 .project-image.heavy-equipment-price-prediction img {
   object-fit: contain;
   background: #f3f6f1;
-}
-.placeholder-icon {
-  display: grid;
-  place-items: center;
-  width: 74px;
-  height: 74px;
-  border: 1px solid #ffffffc9;
-  border-radius: 22px;
-  background: #ffffffa6;
-  color: var(--accent);
-  box-shadow: var(--shadow-sm);
-}
-.project-placeholder strong {
-  font-family: var(--font-heading);
-  font-size: 0.9rem;
-  letter-spacing: 0.12em;
-}
-.project-placeholder small {
-  color: var(--muted);
-  font-size: 0.75rem;
-  letter-spacing: 0.07em;
 }
 .project-image img {
   width: 100%;
@@ -99,7 +69,6 @@
   flex-direction: column;
   flex: 1;
 }
-.project-body { background: inherit; }
 .project-meta {
   display: flex;
   flex-wrap: wrap;
@@ -190,19 +159,12 @@
 .compact .project-subtitle {
   font-size: 0.78rem;
 }
-.compact .project-description,
-.compact .project-detail {
-  display: none;
-}
 .compact .project-result {
   margin-top: 12px;
   font-size: 0.75rem;
 }
 .compact .tech-list {
   margin-top: 14px;
-}
-.compact .tech-list span:nth-child(n + 4) {
-  display: none;
 }
 .compact .project-links {
   padding-top: 14px;

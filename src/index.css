@@ -162,10 +162,6 @@ main:focus {
 .button-primary:hover:not(:disabled) {
   background: var(--accent-hover);
 }
-.button-primary:disabled {
-  background: #e2e7df;
-  color: #535e50;
-}
 .button-secondary {
   border-color: var(--border-strong);
   background: var(--white);

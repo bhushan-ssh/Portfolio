@@ -2,23 +2,17 @@ import { useState } from "react";
 import { asset } from "../data/assets";
 import Icon from "./Icon";
 import "./ProjectCard.css";
-export default function ProjectCard({
-  project,
-  compact = false,
-  onPreview,
-  onCaseStudy,
-}) {
+export default function ProjectCard({ project, onPreview, onCaseStudy }) {
   const [failed, setFailed] = useState(false);
+  const compact = !project.featured;
   return (
-    <article
-      className={`project-card ${project.featured ? "featured" : ""} ${compact ? "compact" : ""}`}
-    >
-      {!compact && project.image ? (
+    <article className={`project-card${compact ? " compact" : ""}`}>
+      {!compact && (
         <button
           className={`project-image ${project.id}`}
           aria-label={`View ${project.title} screenshot`}
           disabled={failed}
-          onClick={() => onPreview(project)}
+          onClick={onPreview}
         >
           {failed ? (
             <span className="image-fallback">
@@ -47,17 +41,6 @@ export default function ProjectCard({
             <span>View screenshot</span>
           </span>
         </button>
-      ) : !compact && (
-        <div
-          className={`project-image project-placeholder ${project.id}`}
-          aria-hidden="true"
-        >
-          <span className="placeholder-icon">
-            <Icon name={project.visualIcon} size={40} />
-          </span>
-          <strong>{project.visualTitle}</strong>
-          <small>{project.visualDetail}</small>
-        </div>
       )}
       <div className="project-body">
         <div className="project-meta">
@@ -73,9 +56,11 @@ export default function ProjectCard({
           <span aria-hidden="true">↗</span>
         </h3>
         <p className="project-subtitle">{project.subtitle}</p>
-        <p className="project-description">{project.description}</p>
+        {!compact && (
+          <p className="project-description">{project.description}</p>
+        )}
         <div className="tech-list">
-          {project.tech.map((item) => (
+          {(compact ? project.tech.slice(0, 3) : project.tech).map((item) => (
             <span key={item}>{item}</span>
           ))}
         </div>
@@ -83,13 +68,15 @@ export default function ProjectCard({
           <Icon name={project.award ? "trophy" : "check"} size={17} />
           <span>{project.result}</span>
         </div>
-        {project.detail && <p className="project-detail">{project.detail}</p>}
+        {!compact && project.detail && (
+          <p className="project-detail">{project.detail}</p>
+        )}
         <div className="project-links">
           {project.caseStudy && (
             <button
               className="text-link case-study-trigger"
               type="button"
-              onClick={() => onCaseStudy(project)}
+              onClick={onCaseStudy}
               aria-label={`Read ${project.title} case study`}
             >
               Case study <Icon name="arrow" size={16} />

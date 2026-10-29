@@ -4,6 +4,9 @@ import { asset } from "../data/assets";
 import SectionHeading from "./SectionHeading";
 import Icon from "./Icon";
 import "./Certifications.css";
+
+const selectedCount = 3;
+
 function CertificateCard({ certificate }) {
   const [failed, setFailed] = useState(false);
   return (
@@ -68,7 +71,7 @@ export default function Certifications() {
           </a>
         </div>
         <div className="certificate-grid" id="certificate-list">
-          {(expanded ? certifications : certifications.slice(0, 3)).map(
+          {(expanded ? certifications : certifications.slice(0, selectedCount)).map(
             (certificate) => (
               <CertificateCard certificate={certificate} key={certificate.id} />
             ),
@@ -77,8 +80,8 @@ export default function Certifications() {
         <div className="certificate-more">
           <p>
             {expanded
-              ? "All 21 certificates, academic milestones & participation records."
-              : "A selection from 21 certificates, academic milestones & participation records."}
+              ? `All ${certifications.length} certificates, academic milestones & participation records.`
+              : `A selection from ${certifications.length} certificates, academic milestones & participation records.`}
           </p>
           <button
             className="button button-secondary"
@@ -88,7 +91,7 @@ export default function Certifications() {
           >
             {expanded
               ? "Show selected certificates"
-              : "Explore all 21 certificates"}
+              : `Explore all ${certifications.length} certificates`}
             <Icon name="chevron" className={expanded ? "rotate" : ""} />
           </button>
         </div>

@@ -6,10 +6,13 @@ import ProjectCard from "./ProjectCard";
 import Modal from "./Modal";
 import Icon from "./Icon";
 import "./Projects.css";
+
+const filters = ["All", "Web", "Machine Learning"];
+
 export default function Projects() {
   const [filter, setFilter] = useState("All");
-  const [selected, setSelected] = useState(null);
-  const [selectedStudy, setSelectedStudy] = useState(null);
+  const [activeModal, setActiveModal] = useState(null);
+  const selected = activeModal?.project;
   const visible = projects.filter(
     (project) => filter === "All" || project.category === filter,
   );
@@ -42,7 +45,7 @@ export default function Projects() {
           </a>
         </div>
         <div className="filter-bar" role="group" aria-label="Filter projects">
-          {["All", "Web", "Machine Learning"].map((item) => (
+          {filters.map((item) => (
             <button
               key={item}
               aria-pressed={filter === item}
@@ -64,8 +67,8 @@ export default function Projects() {
                 <ProjectCard
                   key={project.id}
                   project={project}
-                  onPreview={setSelected}
-                  onCaseStudy={setSelectedStudy}
+                  onPreview={() => setActiveModal({ type: "preview", project })}
+                  onCaseStudy={() => setActiveModal({ type: "caseStudy", project })}
                 />
               ))}
             </div>
@@ -84,18 +87,16 @@ export default function Projects() {
                 <ProjectCard
                   key={project.id}
                   project={project}
-                  compact
-                  onPreview={setSelected}
-                  onCaseStudy={setSelectedStudy}
+                  onCaseStudy={() => setActiveModal({ type: "caseStudy", project })}
                 />
               ))}
             </div>
           </div>
         )}
-        {selected && (
+        {activeModal?.type === "preview" && (
           <Modal
             label={`${selected.title} screenshot`}
-            onClose={() => setSelected(null)}
+            onClose={() => setActiveModal(null)}
             className="lightbox"
           >
             <h3>{selected.title}</h3>
@@ -116,42 +117,42 @@ export default function Projects() {
             </a>
           </Modal>
         )}
-        {selectedStudy && (
+        {activeModal?.type === "caseStudy" && (
           <Modal
-            label={`${selectedStudy.title} case study`}
-            onClose={() => setSelectedStudy(null)}
+            label={`${selected.title} case study`}
+            onClose={() => setActiveModal(null)}
             className="case-study-modal"
           >
             <article className="case-study-content">
               <p className="eyebrow">PROJECT CASE STUDY</p>
-              <h2>{selectedStudy.title}</h2>
-              <p className="case-study-subtitle">{selectedStudy.subtitle}</p>
+              <h2>{selected.title}</h2>
+              <p className="case-study-subtitle">{selected.subtitle}</p>
               <div className="case-study-visual">
                 <img
-                  src={asset(selectedStudy.image)}
-                  alt={selectedStudy.alt}
-                  width={selectedStudy.width}
-                  height={selectedStudy.height}
+                  src={asset(selected.image)}
+                  alt={selected.alt}
+                  width={selected.width}
+                  height={selected.height}
                 />
               </div>
               <div className="case-study-result">
                 <span className="small-label">RESULT</span>
-                <p>{selectedStudy.result}</p>
-                <small>{selectedStudy.caseStudy.outcome}</small>
+                <p>{selected.result}</p>
+                <small>{selected.caseStudy.outcome}</small>
               </div>
               <div className="case-study-grid">
                 <section>
                   <h3>The problem</h3>
-                  <p>{selectedStudy.caseStudy.problem}</p>
+                  <p>{selected.caseStudy.problem}</p>
                 </section>
                 <section>
                   <h3>My contribution</h3>
-                  <p>{selectedStudy.caseStudy.contribution}</p>
+                  <p>{selected.caseStudy.contribution}</p>
                 </section>
                 <section className="case-study-decisions">
                   <h3>Technical decisions</h3>
                   <ul>
-                    {selectedStudy.caseStudy.decisions.map((decision) => (
+                    {selected.caseStudy.decisions.map((decision) => (
                       <li key={decision}>{decision}</li>
                     ))}
                   </ul>
@@ -159,13 +160,13 @@ export default function Projects() {
               </div>
               <div className="case-study-footer">
                 <div className="tech-list">
-                  {selectedStudy.tech.map((item) => (
+                  {selected.tech.map((item) => (
                     <span key={item}>{item}</span>
                   ))}
                 </div>
                 <a
                   className="button button-primary"
-                  href={selectedStudy.repo}
+                  href={selected.repo}
                   target="_blank"
                   rel="noreferrer"
                 >
