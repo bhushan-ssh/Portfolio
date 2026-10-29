@@ -1,4 +1,4 @@
-import { socials } from "../data/socials";
+import { email, socials } from "../data/socials";
 import Icon from "./Icon";
 import SectionHeading from "./SectionHeading";
 import "./Contact.css";
@@ -22,6 +22,9 @@ export default function Contact() {
             I&apos;m interested in connecting with developers, collaborating on
             projects, and exploring internship opportunities.
           </p>
+          <a className="contact-email" href={`mailto:${email}`}>
+            {email} <Icon name="arrow" size={20} />
+          </a>
           <div className="contact-note">
             <span className="status-dot" /> Open to developer internships &
             opportunities

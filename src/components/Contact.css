@@ -1,6 +1,10 @@
 .contact-section {
-  background: var(--section-contact);
-  border-block: 1px solid var(--border);
+  background: radial-gradient(circle at 12% 90%, #2b5541 0, transparent 36%), var(--section-contact);
+  color: #f7faf4;
+}
+.contact-section .eyebrow,
+.contact-section .section-heading h2 span {
+  color: #add4ac;
 }
 .contact-grid {
   display: grid;
@@ -15,9 +19,25 @@
 .contact-description {
   margin-top: 24px;
   max-width: 420px;
-  color: var(--muted);
+  color: #d0ded1;
   font-size: 0.95rem;
   line-height: 1.9;
+}
+.contact-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  max-width: 100%;
+  margin-top: 28px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #add4ac;
+  color: #f7faf4;
+  font-size: clamp(0.95rem, 1.6vw, 1.15rem);
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.contact-email:hover {
+  color: #add4ac;
 }
 .contact-note {
   margin-top: 32px;
@@ -25,14 +45,15 @@
   align-items: center;
   gap: 10px;
   font-size: 0.75rem;
-  color: var(--muted);
+  color: #d0ded1;
 }
 .social-directory {
   padding: 32px;
-  border: 1px solid var(--border);
+  border: 1px solid #ffffff65;
   border-radius: var(--radius);
-  background: #ffffffb8;
-  box-shadow: var(--shadow-sm);
+  background: #f7faf4;
+  color: var(--text);
+  box-shadow: 0 24px 60px #071e1640;
 }
 .social-directory h3 {
   font-size: 1.05rem;
@@ -70,7 +91,7 @@
   flex: 0 0 38px;
   height: 38px;
   border-radius: 10px;
-  background: #ffffffb8;
+  background: var(--sage-light);
   color: var(--accent-hover);
 }
 @media (max-width: 1000px) {

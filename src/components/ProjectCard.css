@@ -1,4 +1,5 @@
 .project-card {
+  color: var(--text);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
@@ -13,7 +14,7 @@
 }
 .project-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 24px 52px #061a1340;
 }
 .project-image {
   border: 0;
