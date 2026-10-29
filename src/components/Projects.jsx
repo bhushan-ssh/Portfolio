@@ -9,6 +9,7 @@ import "./Projects.css";
 export default function Projects() {
   const [filter, setFilter] = useState("All");
   const [selected, setSelected] = useState(null);
+  const [selectedStudy, setSelectedStudy] = useState(null);
   const visible = projects.filter(
     (project) => filter === "All" || project.category === filter,
   );
@@ -59,6 +60,7 @@ export default function Projects() {
               key={project.id}
               project={project}
               onPreview={setSelected}
+              onCaseStudy={setSelectedStudy}
             />
           ))}
         </div>
@@ -84,6 +86,65 @@ export default function Projects() {
             >
               Explore the source <Icon name="arrow" />
             </a>
+          </Modal>
+        )}
+        {selectedStudy && (
+          <Modal
+            label={`${selectedStudy.title} case study`}
+            onClose={() => setSelectedStudy(null)}
+            className="case-study-modal"
+          >
+            <article className="case-study-content">
+              <p className="eyebrow">PROJECT CASE STUDY</p>
+              <h2>{selectedStudy.title}</h2>
+              <p className="case-study-subtitle">{selectedStudy.subtitle}</p>
+              <div className="case-study-visual">
+                <img
+                  src={asset(selectedStudy.image)}
+                  alt={selectedStudy.alt}
+                  width={selectedStudy.width}
+                  height={selectedStudy.height}
+                />
+              </div>
+              <div className="case-study-result">
+                <span className="small-label">RESULT</span>
+                <p>{selectedStudy.result}</p>
+                <small>{selectedStudy.caseStudy.outcome}</small>
+              </div>
+              <div className="case-study-grid">
+                <section>
+                  <h3>The problem</h3>
+                  <p>{selectedStudy.caseStudy.problem}</p>
+                </section>
+                <section>
+                  <h3>My contribution</h3>
+                  <p>{selectedStudy.caseStudy.contribution}</p>
+                </section>
+                <section className="case-study-decisions">
+                  <h3>Technical decisions</h3>
+                  <ul>
+                    {selectedStudy.caseStudy.decisions.map((decision) => (
+                      <li key={decision}>{decision}</li>
+                    ))}
+                  </ul>
+                </section>
+              </div>
+              <div className="case-study-footer">
+                <div className="tech-list">
+                  {selectedStudy.tech.map((item) => (
+                    <span key={item}>{item}</span>
+                  ))}
+                </div>
+                <a
+                  className="button button-primary"
+                  href={selectedStudy.repo}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  View source on GitHub <Icon name="arrow" size={16} />
+                </a>
+              </div>
+            </article>
           </Modal>
         )}
       </div>

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { asset } from "../data/assets";
 import Icon from "./Icon";
 import "./ProjectCard.css";
-export default function ProjectCard({ project, onPreview }) {
+export default function ProjectCard({ project, onPreview, onCaseStudy }) {
   const [failed, setFailed] = useState(false);
   return (
     <article className={`project-card ${project.featured ? "featured" : ""}`}>
@@ -78,6 +78,16 @@ export default function ProjectCard({ project, onPreview }) {
         </div>
         {project.detail && <p className="project-detail">{project.detail}</p>}
         <div className="project-links">
+          {project.caseStudy && (
+            <button
+              className="text-link case-study-trigger"
+              type="button"
+              onClick={() => onCaseStudy(project)}
+              aria-label={`Read ${project.title} case study`}
+            >
+              Case study <Icon name="arrow" size={16} />
+            </button>
+          )}
           <a
             className="text-link"
             href={project.repo}
