@@ -12,11 +12,9 @@
   padding: 20px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: var(--card-blue);
+  background: var(--card-surface);
   margin-bottom: 16px;
 }
-.education-timeline li:nth-child(3n + 2) { background: var(--card-mint); }
-.education-timeline li:nth-child(3n) { background: var(--card-lilac); }
 .education-timeline li::before {
   content: "";
   position: absolute;
@@ -37,13 +35,13 @@
   margin-bottom: 12px;
 }
 .education-monogram {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent-hover);
   letter-spacing: 0.1em;
 }
 .education-date {
-  font-size: 0.67rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .education h4 {

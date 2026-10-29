@@ -2,7 +2,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   overflow: hidden;
-  background: var(--card-mint);
+  background: var(--card-surface);
   box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
@@ -11,9 +11,6 @@
     box-shadow 0.25s;
   min-width: 0;
 }
-.project-card:nth-child(4n + 2) { background: var(--card-blue); }
-.project-card:nth-child(4n + 3) { background: var(--card-peach); }
-.project-card:nth-child(4n) { background: var(--card-lilac); }
 .project-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
@@ -59,7 +56,7 @@
 }
 .project-placeholder small {
   color: var(--muted);
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.07em;
 }
 .project-image img {
@@ -86,7 +83,7 @@
   color: var(--text);
   border: 1px solid var(--border);
   border-radius: 6px;
-  font-size: 0.67rem;
+  font-size: 0.75rem;
   box-shadow: var(--shadow-sm);
 }
 .expand-hint > span {
@@ -115,7 +112,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 0.55rem;
+  font-size: 0.75rem;
   font-weight: 700;
   color: var(--accent-hover);
   background: var(--sage-light);
@@ -191,7 +188,7 @@
   font-size: 1.1rem;
 }
 .compact .project-subtitle {
-  font-size: 0.74rem;
+  font-size: 0.78rem;
 }
 .compact .project-description,
 .compact .project-detail {
@@ -199,7 +196,7 @@
 }
 .compact .project-result {
   margin-top: 12px;
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 .compact .tech-list {
   margin-top: 14px;
@@ -221,7 +218,7 @@
 }
 .image-fallback small {
   color: var(--muted);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 @media (max-width: 900px) {
   .project-body {

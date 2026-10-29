@@ -90,7 +90,7 @@ main:focus {
 }
 .eyebrow,
 .small-label {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
   letter-spacing: 0.14em;
   font-weight: 600;
   color: var(--accent);
@@ -99,7 +99,7 @@ main:focus {
   margin-bottom: 20px;
 }
 .small-label {
-  font-size: 0.61rem;
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
 }
 .section-heading h2 {
@@ -216,7 +216,7 @@ main:focus {
   gap: 6px;
 }
 .tech-list span {
-  font-size: 0.68rem;
+  font-size: 0.75rem;
   color: var(--muted);
   padding: 5px 10px;
   border: 1px solid var(--border);

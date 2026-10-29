@@ -38,7 +38,7 @@ export default function Navbar() {
     };
   }, []);
   useEffect(() => {
-    const query = window.matchMedia("(min-width: 800px)");
+    const query = window.matchMedia("(min-width: 901px)");
     const close = () => {
       if (query.matches) setOpen(false);
     };

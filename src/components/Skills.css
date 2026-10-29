@@ -9,16 +9,11 @@
   padding: 24px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--card-mint);
+  background: var(--card-surface);
   transition:
     transform 0.2s,
     box-shadow 0.2s;
 }
-.skill-card:nth-child(6n + 2) { background: var(--card-blue); }
-.skill-card:nth-child(6n + 3) { background: var(--card-peach); }
-.skill-card:nth-child(6n + 4) { background: var(--card-lilac); }
-.skill-card:nth-child(6n + 5) { background: var(--card-yellow); }
-.skill-card:nth-child(6n) { background: var(--card-pink); }
 .skill-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
@@ -28,7 +23,7 @@
   height: 48px;
   display: grid;
   place-items: center;
-  background: var(--card-blue);
+  background: var(--sage-light);
   border-radius: 12px;
   color: var(--accent);
   margin-bottom: 24px;
@@ -38,7 +33,7 @@
   margin-bottom: 16px;
 }
 .skill-card .tech-list span {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   padding: 5px 8px;
 }
 .exploring {
