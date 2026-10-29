@@ -2,11 +2,18 @@ import { useState } from "react";
 import { asset } from "../data/assets";
 import Icon from "./Icon";
 import "./ProjectCard.css";
-export default function ProjectCard({ project, onPreview, onCaseStudy }) {
+export default function ProjectCard({
+  project,
+  compact = false,
+  onPreview,
+  onCaseStudy,
+}) {
   const [failed, setFailed] = useState(false);
   return (
-    <article className={`project-card ${project.featured ? "featured" : ""}`}>
-      {project.image ? (
+    <article
+      className={`project-card ${project.featured ? "featured" : ""} ${compact ? "compact" : ""}`}
+    >
+      {!compact && project.image ? (
         <button
           className={`project-image ${project.id}`}
           aria-label={`View ${project.title} screenshot`}
@@ -40,7 +47,7 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
             <span>View screenshot</span>
           </span>
         </button>
-      ) : (
+      ) : !compact && (
         <div
           className={`project-image project-placeholder ${project.id}`}
           aria-hidden="true"
@@ -55,9 +62,9 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
       <div className="project-body">
         <div className="project-meta">
           <span className="small-label">{project.category}</span>
-          {project.featured && (
+          {project.award && (
             <span className="award-badge">
-              <Icon name="trophy" size={14} /> HACKATHON WINNER
+              <Icon name="trophy" size={14} /> {project.award}
             </span>
           )}
         </div>
@@ -73,7 +80,7 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
           ))}
         </div>
         <div className="project-result">
-          <Icon name={project.featured ? "trophy" : "check"} size={17} />
+          <Icon name={project.award ? "trophy" : "check"} size={17} />
           <span>{project.result}</span>
         </div>
         {project.detail && <p className="project-detail">{project.detail}</p>}
