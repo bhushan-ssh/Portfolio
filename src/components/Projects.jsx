@@ -13,6 +13,8 @@ export default function Projects() {
   const visible = projects.filter(
     (project) => filter === "All" || project.category === filter,
   );
+  const featuredProjects = visible.filter((project) => project.featured);
+  const moreProjects = visible.filter((project) => !project.featured);
   return (
     <section
       id="projects"
@@ -54,16 +56,42 @@ export default function Projects() {
         <p className="sr-only" role="status">
           Showing {visible.length} {filter === "All" ? "" : filter} projects
         </p>
-        <div className="project-grid">
-          {visible.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              onPreview={setSelected}
-              onCaseStudy={setSelectedStudy}
-            />
-          ))}
-        </div>
+        {featuredProjects.length > 0 && (
+          <div className="project-group">
+            <h3 className="project-group-title">Featured projects</h3>
+            <div className="project-grid featured-project-grid">
+              {featuredProjects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  onPreview={setSelected}
+                  onCaseStudy={setSelectedStudy}
+                />
+              ))}
+            </div>
+          </div>
+        )}
+        {moreProjects.length > 0 && (
+          <div className="project-group more-projects-group">
+            <div className="project-group-heading">
+              <h3 className="project-group-title">More projects</h3>
+              <span>
+                {moreProjects.length} {moreProjects.length === 1 ? "project" : "projects"}
+              </span>
+            </div>
+            <div className="project-grid more-projects-grid">
+              {moreProjects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  compact
+                  onPreview={setSelected}
+                  onCaseStudy={setSelectedStudy}
+                />
+              ))}
+            </div>
+          </div>
+        )}
         {selected && (
           <Modal
             label={`${selected.title} screenshot`}

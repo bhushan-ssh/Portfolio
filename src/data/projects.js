@@ -4,6 +4,7 @@ export const projects = [
     title: "Uptime",
     category: "Machine Learning",
     featured: true,
+    award: "HACKATHON WINNER",
     subtitle: "AI-powered predictive maintenance",
     description:
       "A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.",
@@ -65,6 +66,7 @@ export const projects = [
     id: "heavy-equipment-price-prediction",
     title: "Heavy Equipment Price Prediction",
     category: "Machine Learning",
+    featured: true,
     subtitle: "Predicting used equipment selling prices",
     description:
       "An end-to-end regression pipeline that estimates resale prices from equipment specifications, usage, and transaction data.",
@@ -112,6 +114,7 @@ export const projects = [
     id: "smart-mcq-solver",
     title: "Smart MCQ Solver",
     category: "Machine Learning",
+    featured: true,
     subtitle: "Deep learning for multiple-choice questions",
     description:
       "Compares BiLSTM, BiGRU with attention, and fine-tuned BERT to rank the top three answers for each question.",
