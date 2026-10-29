@@ -24,13 +24,27 @@ export const projects = [
     subtitle: "Connecting students with opportunities",
     description:
       "A career platform connecting students with opportunities, featuring role-based access and REST APIs.",
-    tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "REST API"],
+    tech: ["Vue 3", "Flask-RESTful", "SQLAlchemy", "SQLite", "Redis", "Celery"],
     result: "Designed to connect 500+ students",
     repo: "https://github.com/bhushan-ssh/CareerLink",
     image: "projects/careerlink.webp",
     width: 1440,
     height: 681,
     alt: "CareerLink home page with a job search form and student career profile",
+    caseStudy: {
+      problem:
+        "Campus placement work spans student profiles, company job postings, applications, and placement tracking. CareerLink brings those workflows into one portal for students, companies, and administrators.",
+      contribution:
+        "Built this academic full-stack project, including the Vue frontend, Flask API, role-based workflows, data model, and background processing features.",
+      decisions: [
+        "Separated the Vue 3 single-page app from the Flask-RESTful API.",
+        "Used token authentication and role-based access for student, company, and admin actions.",
+        "Used SQLAlchemy with SQLite for the relational workflow data.",
+        "Added Redis and Celery for caching, CSV exports, interview reminders, and scheduled reports.",
+      ],
+      outcome:
+        "The project demonstrates the placement lifecycle end to end, including application status tracking and async exports. The 500+ student figure is a design target, not a measured user count.",
+    },
   },
   {
     id: "quizmaster",
@@ -63,6 +77,20 @@ export const projects = [
     width: 800,
     height: 766,
     alt: "Heavy equipment selling price prediction project preview",
+    caseStudy: {
+      problem:
+        "Used equipment prices depend on age, operating hours, equipment specifications, location, and transaction details. The task is to estimate selling prices from 138,701 historical transactions.",
+      contribution:
+        "Built a regression pipeline with feature engineering, five-fold model evaluation, and an ensemble for final price predictions.",
+      decisions: [
+        "Modelled log prices to align training with the RMSLE evaluation metric.",
+        "Added structural-missingness indicators and equipment-age features; encoded high-cardinality categories and identifiers.",
+        "Compared XGBoost, CatBoost, and HistGradientBoosting with five-fold cross-validation.",
+        "Blended fold predictions with non-negative least squares in log-price space.",
+      ],
+      outcome:
+        "The ensemble reached 0.20217 out-of-fold RMSLE, where lower is better. This is a cross-validation result, not a score on an unseen competition leaderboard.",
+    },
   },
   {
     id: "titanic-survival-prediction",
@@ -96,5 +124,18 @@ export const projects = [
     width: 1280,
     height: 720,
     alt: "Smart MCQ Solver project preview",
+    caseStudy: {
+      problem:
+        "For five-option multiple-choice questions, selecting the top answer is not the only goal: the correct choice should appear in the top three, which is what MAP@3 rewards.",
+      contribution:
+        "Built and compared three approaches—BiLSTM, BiGRU with attention, and fine-tuned BERT—then optimized a validation-weighted ensemble and connected it to a Streamlit interface.",
+      decisions: [
+        "Implemented the BiLSTM and BiGRU models in PyTorch and fine-tuned bert-base-uncased for multiple-choice classification.",
+        "Used a group-aware train/validation split to reduce leakage between related questions.",
+        "Compared all models on the same validation set and optimized ensemble weights for MAP@3.",
+      ],
+      outcome:
+        "The ensemble improved validation MAP@3 from 0.7201 for BERT alone to 0.7503. These are validation results; performance on unseen data may differ.",
+    },
   },
 ];

@@ -25,6 +25,104 @@
 .lightbox {
   width: min(1100px, calc(100% - 32px));
 }
+.case-study-modal {
+  width: min(980px, calc(100% - 32px));
+}
+.case-study-content > .eyebrow {
+  margin-bottom: 12px;
+}
+.case-study-content h2 {
+  max-width: calc(100% - 48px);
+  font-size: clamp(1.8rem, 4vw, 2.7rem);
+  line-height: 1.15;
+  letter-spacing: -0.045em;
+}
+.case-study-subtitle {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.case-study-visual {
+  display: grid;
+  place-items: center;
+  margin-top: 24px;
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--surface);
+}
+.case-study-visual img {
+  width: 100%;
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+  border-radius: 6px;
+}
+.case-study-result {
+  margin-top: 20px;
+  padding: 20px 24px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card-mint);
+}
+.case-study-result > p {
+  margin-top: 6px;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent-hover);
+}
+.case-study-result > small {
+  display: block;
+  margin-top: 8px;
+  max-width: 780px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.7;
+}
+.case-study-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px 32px;
+  margin-top: 24px;
+}
+.case-study-grid section {
+  padding: 18px 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #ffffffa8;
+}
+.case-study-grid h3 {
+  font-size: 0.92rem;
+  margin-bottom: 8px;
+}
+.case-study-grid p,
+.case-study-grid li {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.75;
+}
+.case-study-grid ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+}
+.case-study-decisions {
+  grid-column: 1 / -1;
+}
+.case-study-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid var(--border);
+}
+.case-study-footer .button {
+  flex-shrink: 0;
+}
 .lightbox h3 {
   margin-right: 48px;
   font-size: 1.4rem;
@@ -48,5 +146,19 @@
   }
   .mobile-menu .modal-panel {
     padding: 32px 24px;
+  }
+  .case-study-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .case-study-decisions {
+    grid-column: auto;
+  }
+  .case-study-footer {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .case-study-footer .button {
+    width: 100%;
   }
 }
