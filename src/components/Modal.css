@@ -63,7 +63,7 @@
   padding: 20px 24px;
   border: 1px solid var(--border);
   border-radius: 12px;
-  background: var(--card-mint);
+  background: var(--sage-light);
 }
 .case-study-result > p {
   margin-top: 6px;

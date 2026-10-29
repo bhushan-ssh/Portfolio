@@ -24,7 +24,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 0.73rem;
+  font-size: 0.75rem;
   color: var(--muted);
 }
 .social-directory {
@@ -51,14 +51,11 @@
   padding: 12px 14px;
   border: 1px solid var(--border);
   border-radius: 10px;
-  background: var(--card-mint);
+  background: var(--card-surface);
   font-size: 0.82rem;
   font-weight: 500;
   transition: transform 0.2s, box-shadow 0.2s;
 }
-.social-card:nth-child(4n + 2) { background: var(--card-blue); }
-.social-card:nth-child(4n + 3) { background: var(--card-lilac); }
-.social-card:nth-child(4n) { background: var(--card-peach); }
 .social-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
