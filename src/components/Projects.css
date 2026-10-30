@@ -1,24 +1,23 @@
 .projects-section {
-  background: radial-gradient(circle at 8% 9%, #2a5141 0, transparent 34%), var(--section-projects);
-  color: #f7faf4;
+  background: var(--section-projects);
+  color: var(--text);
 }
 .projects-section .section-heading {
-  max-width: 610px;
+  max-width: 780px;
 }
 .projects-section .eyebrow,
-.projects-section .section-heading h2 span,
-.projects-section .heading-row > .text-link {
-  color: #add4ac;
+.projects-section .section-heading h2 span {
+  color: var(--accent);
 }
 .projects-section .section-description,
 .project-group-heading > span {
-  color: #c1d1c6;
+  color: var(--muted);
 }
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin: 32px 0 24px;
+  margin: 44px 0 34px;
 }
 .filter-bar button {
   display: inline-flex;
@@ -28,23 +27,29 @@
   min-height: 44px;
   padding: 10px 20px;
   font-size: 0.8rem;
-  color: #d3e0d4;
-  border: 1px solid #ffffff2b;
+  color: var(--muted);
+  border: 1px solid var(--border-strong);
   background: transparent;
-  border-radius: var(--radius-sm);
+  border-radius: 100px;
 }
 .filter-bar button[aria-pressed="true"] {
-  background: #f5f8f1;
-  color: var(--section-projects);
-  border-color: #f5f8f1;
-  box-shadow: var(--shadow-sm);
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
 }
 .filter-bar button:hover {
-  color: var(--section-projects);
-  background: #f5f8f1;
+  color: var(--ink);
+  background: var(--lime);
+  border-color: var(--lime);
+}
+.filter-bar button[aria-pressed="true"]:hover {
+  color: #fff;
+  background: var(--ink);
+  border-color: var(--ink);
 }
 .filter-bar span {
   font-size: 0.75rem;
+  color: var(--ink);
   border-radius: 4px;
   padding: 1px 5px;
   background: var(--sage-light);
@@ -54,13 +59,13 @@
   gap: 24px;
 }
 .project-group + .project-group {
-  margin-top: 64px;
+  margin-top: 80px;
 }
 .project-group-title {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   font-family: var(--font-heading);
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
+  font-size: 1.4rem;
+  letter-spacing: -0.05em;
 }
 .project-group-heading {
   display: flex;
@@ -85,6 +90,7 @@
   border-right: 1px solid var(--border);
   border-bottom: 0;
   padding: 32px;
+  background: #e5ecdf;
 }
 .featured-project-grid > :first-child .project-image img {
   object-fit: contain;

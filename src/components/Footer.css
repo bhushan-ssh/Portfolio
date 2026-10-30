@@ -1,5 +1,11 @@
 .footer {
-  padding-block: 40px 24px;
+  padding-block: 48px 28px;
+  background: var(--ink);
+  color: #f8fbf4;
+  border-top: 1px solid #ffffff2a;
+}
+.footer .brand span {
+  color: var(--lime);
 }
 .footer-top,
 .footer-bottom {
@@ -9,18 +15,18 @@
   gap: 24px;
 }
 .footer-top > p {
-  color: var(--muted);
+  color: #b9c9ba;
   font-size: 0.8rem;
 }
 .footer-bottom {
-  border-top: 1px solid var(--border);
+  border-top: 1px solid #ffffff2a;
   margin-top: 24px;
   padding-top: 24px;
 }
 .footer-bottom p,
 .footer-bottom .text-link {
   font-size: 0.75rem;
-  color: var(--muted);
+  color: #b9c9ba;
 }
 @media (max-width: 750px) {
   .footer-top,

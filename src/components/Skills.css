@@ -1,47 +1,62 @@
-.skills-section { --section-background: var(--section-skills); }
+.skills-section {
+  --section-background: var(--section-skills);
+  color: #f7faf2;
+}
+.skills-section .eyebrow,
+.skills-section .section-heading h2 span {
+  color: var(--lime);
+}
+.skills-section .aside-copy {
+  color: #c4d3c5;
+}
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-  margin-top: 40px;
+  gap: 18px;
+  margin-top: 52px;
 }
 .skill-card {
-  padding: 24px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: var(--card-surface);
+  padding: 30px;
+  border: 1px solid #ffffff30;
+  border-radius: 18px;
+  background: #ffffff0b;
   transition:
     transform 0.2s,
-    box-shadow 0.2s;
+    border-color 0.2s,
+    background 0.2s;
 }
 .skill-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: var(--lime);
+  background: #ffffff13;
 }
 .skill-icon {
-  width: 48px;
-  height: 48px;
+  width: 54px;
+  height: 54px;
   display: grid;
   place-items: center;
-  background: var(--sage-light);
-  border-radius: 12px;
-  color: var(--accent);
-  margin-bottom: 24px;
+  background: var(--lime);
+  border-radius: 16px;
+  color: var(--ink);
+  margin-bottom: 30px;
 }
 .skill-card h3 {
-  font-size: 0.95rem;
-  margin-bottom: 16px;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
 }
 .skill-card .tech-list span {
+  color: #e2eadf;
+  background: #ffffff12;
+  border-color: #ffffff2b;
   font-size: 0.75rem;
   padding: 5px 8px;
 }
 .exploring {
-  margin-top: 24px;
-  padding: 20px 24px;
-  background: var(--surface);
-  border: 1px dashed #bcc8b8;
-  border-radius: var(--radius-sm);
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: #ffffff0b;
+  border: 1px solid #ffffff30;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   gap: 24px;
@@ -51,11 +66,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--accent-hover);
+  color: var(--lime);
   font-weight: 500;
 }
 .exploring p {
-  color: var(--muted);
+  color: #c4d3c5;
 }
 @media (max-width: 1000px) {
   .skills-grid {
@@ -64,10 +79,11 @@
 }
 @media (max-width: 550px) {
   .skills-grid {
-    gap: 12px;
+    grid-template-columns: 1fr;
+    gap: 14px;
   }
   .skill-card {
-    padding: 20px 16px;
+    padding: 26px;
   }
   .exploring {
     align-items: flex-start;

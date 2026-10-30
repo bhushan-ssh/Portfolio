@@ -68,7 +68,7 @@ export default function Navbar() {
     </>
   );
   return (
-    <header className="site-header">
+    <header className={`site-header${active === "home" ? " on-hero" : ""}`}>
       <div className="navbar container">
         <a className="brand" href="#home" aria-label="Bhushan — home">
           bhushan<span>.ssh</span>

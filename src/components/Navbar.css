@@ -2,9 +2,15 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #f6f8f1ed;
+  background: #fcfcf6ed;
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
+  transition: background 0.25s, border-color 0.25s;
+}
+.site-header.on-hero {
+  background: #10251cf2;
+  border-color: #ffffff24;
+  color: #fff;
 }
 .navbar {
   min-height: var(--nav-height);
@@ -14,78 +20,94 @@
 }
 .brand {
   font-family: var(--font-heading);
-  font-weight: 800;
+  font-weight: 700;
   font-size: 1.65rem;
-  letter-spacing: -0.08em;
+  letter-spacing: -0.075em;
 }
 .brand span {
   color: var(--accent);
 }
+.on-hero .brand span {
+  color: var(--lime);
+}
 .desktop-nav {
   display: flex;
-  gap: 8px;
+  gap: 4px;
   align-items: center;
-  font-size: var(--text-sm);
-  font-weight: 500;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 .desktop-nav a {
-  padding: 10px 12px;
   position: relative;
+  padding: 10px 12px;
   color: var(--muted);
-  border-radius: 7px;
-  transition:
-    background 0.2s,
-    color 0.2s;
+  border-radius: 8px;
+  transition: color 0.2s, background 0.2s;
 }
 .desktop-nav a:not(.nav-cta):hover {
   background: var(--sage-light);
-}
-.desktop-nav a[aria-current],
-.desktop-nav a:hover {
   color: var(--accent-hover);
-}
-.desktop-nav a[aria-current]::after {
-  content: "";
-  position: absolute;
-  height: 2px;
-  bottom: 4px;
-  left: 12px;
-  right: 12px;
-  background: var(--accent);
-  border-radius: 2px;
 }
 .desktop-nav a[aria-current]:not(.nav-cta) {
   color: var(--accent-hover);
+}
+.desktop-nav a[aria-current]:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  background: currentColor;
 }
 .desktop-nav .nav-cta,
 .nav-cta {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  padding: 11px 16px;
+  margin-left: 12px;
+  padding: 11px 18px;
+  background: var(--ink);
   color: #fff;
-  background: var(--section-projects);
-  border: 1px solid var(--section-projects);
-  border-radius: var(--radius-sm);
+  border-radius: 100px;
 }
 .desktop-nav .nav-cta:hover {
   color: #fff;
-  background: var(--accent-hover);
+  background: var(--accent);
 }
-.desktop-nav .nav-cta[aria-current]::after {
-  content: none;
+.on-hero .desktop-nav a:not(.nav-cta) {
+  color: #cdd8cc;
+}
+.on-hero .desktop-nav a:not(.nav-cta):hover,
+.on-hero .desktop-nav a[aria-current]:not(.nav-cta) {
+  color: var(--lime);
+  background: #ffffff0e;
+}
+.on-hero .desktop-nav .nav-cta {
+  color: var(--ink);
+  background: var(--lime);
+}
+.on-hero .desktop-nav .nav-cta:hover {
+  background: #efffb4;
 }
 .menu-toggle {
   display: none !important;
 }
+.on-hero .menu-toggle:hover {
+  background: #ffffff1a;
+  color: var(--lime);
+}
 .scroll-progress {
   position: absolute;
   bottom: -1px;
+  width: 100%;
   height: 2px;
   background: var(--accent);
-  width: 100%;
   transform-origin: left;
   pointer-events: none;
+}
+.on-hero .scroll-progress {
+  background: var(--lime);
 }
 .mobile-menu {
   width: min(460px, calc(100% - 32px));
@@ -97,8 +119,11 @@
   margin-top: 32px;
 }
 .mobile-menu nav a {
+  margin: 0;
   padding: 16px;
   font-size: 1.15rem;
+  color: var(--text);
+  background: transparent;
   border-radius: var(--radius-sm);
 }
 .mobile-menu nav a:hover,

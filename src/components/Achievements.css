@@ -1,56 +1,52 @@
-.achievements-section { --section-background: var(--section-achievements); }
+.achievements-section {
+  --section-background: var(--section-achievements);
+}
+.achievements-section .section-heading h2 span {
+  color: var(--accent-hover);
+}
 .achievement-strip {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  margin-top: 40px;
-  padding-block: 8px;
+  gap: 18px;
+  margin-top: 50px;
 }
 .achievement-strip > div {
-  padding: 24px 32px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-}
-.achievement-strip > div:first-child {
-  padding-left: 0;
-}
-.achievement-strip > div + div {
-  border-left: 1px solid var(--border);
+  min-height: 250px;
+  padding: 32px;
+  border: 1px solid #a9c683;
+  border-radius: 18px;
+  background: #ffffff8c;
 }
 .achievement-strip svg {
   color: var(--accent);
-  margin-bottom: 24px;
+  margin-bottom: auto;
 }
 .achievement-strip strong {
+  color: var(--ink);
   font-family: var(--font-heading);
-  color: var(--accent);
-  font-size: clamp(1.8rem, 3.2vw, 2.65rem);
-  letter-spacing: -0.05em;
+  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
   font-weight: 600;
   font-variant-numeric: tabular-nums;
 }
 .achievement-strip h3 {
-  margin-top: 8px;
-  font-size: 0.9rem;
+  margin-top: 16px;
+  font-size: 1rem;
 }
 .achievement-strip p {
   margin-top: 8px;
-  font-size: 0.77rem;
   color: var(--muted);
+  font-size: 0.82rem;
 }
-@media (max-width: 650px) {
+@media (max-width: 850px) {
   .achievement-strip {
     grid-template-columns: 1fr;
   }
-  .achievement-strip > div,
-  .achievement-strip > div:first-child {
-    padding: 24px 0;
-  }
-  .achievement-strip > div + div {
-    border-left: 0;
-    border-top: 1px solid var(--border);
-  }
-  .achievement-strip svg {
-    margin-bottom: 12px;
+  .achievement-strip > div {
+    min-height: 190px;
   }
 }

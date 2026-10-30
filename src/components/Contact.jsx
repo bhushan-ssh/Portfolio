@@ -23,7 +23,7 @@ export default function Contact() {
             projects, and exploring internship opportunities.
           </p>
           <a className="contact-email" href={`mailto:${email}`}>
-            {email} <Icon name="arrow" size={20} />
+            <span>{email}</span> <Icon name="arrow" size={20} />
           </a>
           <div className="contact-note">
             <span className="status-dot" /> Open to developer internships &

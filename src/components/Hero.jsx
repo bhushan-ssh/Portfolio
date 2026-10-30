@@ -23,7 +23,7 @@ export default function Hero() {
           <span>Full-Stack Developer · Data Science Student</span>
         </div>
         <p className="hero-description">
-          Building data-driven web apps and practical machine-learning systems.
+          I turn complex ideas into useful products with thoughtful code and data.
         </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">

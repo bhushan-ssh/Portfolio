@@ -9,10 +9,10 @@
 }
 .education-timeline li {
   position: relative;
-  padding: 20px;
+  padding: 22px;
   border: 1px solid var(--border);
   border-radius: var(--radius-sm);
-  background: var(--card-surface);
+  background: var(--surface);
   margin-bottom: 16px;
 }
 .education-timeline li::before {
