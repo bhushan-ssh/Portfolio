@@ -7,11 +7,6 @@
   border-bottom: 1px solid var(--border);
   transition: background 0.25s, border-color 0.25s;
 }
-.site-header.on-hero {
-  background: #10251cf2;
-  border-color: #ffffff24;
-  color: #fff;
-}
 .navbar {
   min-height: var(--nav-height);
   display: flex;
@@ -26,9 +21,6 @@
 }
 .brand span {
   color: var(--accent);
-}
-.on-hero .brand span {
-  color: var(--lime);
 }
 .desktop-nav {
   display: flex;
@@ -75,27 +67,8 @@
   color: #fff;
   background: var(--accent);
 }
-.on-hero .desktop-nav a:not(.nav-cta) {
-  color: #cdd8cc;
-}
-.on-hero .desktop-nav a:not(.nav-cta):hover,
-.on-hero .desktop-nav a[aria-current]:not(.nav-cta) {
-  color: var(--lime);
-  background: #ffffff0e;
-}
-.on-hero .desktop-nav .nav-cta {
-  color: var(--ink);
-  background: var(--lime);
-}
-.on-hero .desktop-nav .nav-cta:hover {
-  background: #efffb4;
-}
 .menu-toggle {
   display: none !important;
-}
-.on-hero .menu-toggle:hover {
-  background: #ffffff1a;
-  color: var(--lime);
 }
 .scroll-progress {
   position: absolute;
@@ -105,9 +78,6 @@
   background: var(--accent);
   transform-origin: left;
   pointer-events: none;
-}
-.on-hero .scroll-progress {
-  background: var(--lime);
 }
 .mobile-menu {
   width: min(460px, calc(100% - 32px));

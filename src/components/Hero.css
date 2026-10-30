@@ -6,7 +6,7 @@
   align-items: center;
   min-height: 760px;
   padding-top: 88px;
-  color: #f8fbf4;
+  color: var(--text);
 }
 .hero-content {
   position: relative;
@@ -17,21 +17,21 @@
   align-items: center;
   gap: 12px;
   padding: 10px 16px;
-  border: 1px solid #d7f47850;
+  border: 1px solid var(--border-strong);
   border-radius: 100px;
-  color: var(--lime);
-  background: #d7f47812;
+  color: var(--accent-hover);
+  background: #ffffffc9;
   font-size: 0.72rem;
   letter-spacing: 0.11em;
   font-weight: 700;
 }
 .hero .status-dot {
-  background: var(--lime);
-  box-shadow: 0 0 0 4px #d7f47824;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px #38644320;
 }
 .hero-hello {
   margin: 38px 0 14px;
-  color: #c2d1c2;
+  color: var(--accent);
 }
 .hero h1 {
   font-size: clamp(4.4rem, 7.2vw, 7rem);
@@ -40,7 +40,7 @@
   font-weight: 600;
 }
 .hero h1 span {
-  color: var(--lime);
+  color: var(--accent);
 }
 .role-line {
   display: flex;
@@ -49,18 +49,18 @@
   margin-top: 34px;
   font-size: 1.05rem;
   font-weight: 500;
-  color: #e3ebe0;
+  color: var(--text);
 }
 .role-dash {
   width: 32px;
   height: 1px;
-  background: var(--lime);
+  background: var(--accent);
   flex: 0 0 32px;
 }
 .hero-description {
   max-width: 530px;
   margin-top: 20px;
-  color: #c5d3c6;
+  color: var(--muted);
   font-size: 1.12rem;
   line-height: 1.75;
 }
@@ -71,23 +71,23 @@
   margin-top: 38px;
 }
 .hero .button-primary {
-  color: var(--ink);
-  background: var(--lime);
+  color: #fff;
+  background: var(--ink);
 }
 .hero .button-primary:hover {
-  background: #edffae;
+  background: var(--accent);
 }
 .hero .button-secondary {
-  color: #f8fbf4;
-  background: transparent;
-  border-color: #ffffff6b;
+  color: var(--text);
+  background: #ffffffbd;
+  border-color: var(--border-strong);
 }
 .hero .button-secondary:hover {
-  background: #ffffff14;
+  background: var(--sage-light);
 }
 .hero .hero-contact {
   margin-top: 28px;
-  color: var(--lime);
+  color: var(--accent-hover);
   font-size: 0.82rem;
 }
 .hero-visual {
@@ -99,17 +99,17 @@
   content: "";
   position: absolute;
   inset: 30px 48px 52px 10px;
-  background: var(--lime);
+  background: #d4e6bb;
   border-radius: 34px;
   transform: rotate(-7deg);
 }
 .portrait-grid {
   position: absolute;
   inset: -25px -5px 0 5px;
-  background-image: radial-gradient(#b9d87e 1px, transparent 1px);
+  background-image: radial-gradient(#8eae84 1px, transparent 1px);
   background-size: 17px 17px;
   mask-image: radial-gradient(ellipse, #000 15%, transparent 73%);
-  opacity: 0.38;
+  opacity: 0.25;
 }
 .photo-frame {
   position: relative;
@@ -119,7 +119,7 @@
   padding: 8px;
   border-radius: 26px;
   background: #f5f7ef;
-  box-shadow: 0 30px 70px #020f0b70;
+  box-shadow: 0 24px 55px #1d3d2b2e;
   transform: rotate(2deg);
 }
 .profile-photo {
@@ -152,7 +152,7 @@
   border-radius: 14px;
   color: var(--text);
   background: #fff;
-  box-shadow: 0 18px 36px #06140e4a;
+  box-shadow: var(--shadow-lg);
   animation: chip-in 0.8s ease both;
 }
 .floating-note strong,
@@ -177,11 +177,12 @@
 .note-bottom {
   left: -8px;
   bottom: 85px;
-  background: var(--lime);
+  color: #fff;
+  background: var(--ink);
   animation-delay: 0.15s;
 }
 .note-bottom div > span {
-  color: #40533d;
+  color: #d1dfd2;
 }
 .note-icon {
   display: grid;
@@ -190,7 +191,7 @@
   height: 42px;
   border-radius: 50%;
   color: var(--ink);
-  background: #ffffff80;
+  background: var(--lime);
 }
 .hero-bottom {
   grid-column: 1 / -1;
@@ -200,8 +201,8 @@
   gap: 24px;
   margin-top: 72px;
   padding: 25px 0;
-  border-top: 1px solid #ffffff2e;
-  color: #b8c8b9;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
 }
 .hero-bottom p,
 .hero-bottom a {
@@ -212,7 +213,7 @@
 }
 .hero-bottom p > svg,
 .hero-bottom a > svg {
-  color: var(--lime);
+  color: var(--accent);
 }
 .hero-bottom a {
   letter-spacing: 0.13em;
@@ -220,7 +221,7 @@
 }
 .hero-divider {
   margin-inline: 8px;
-  color: #829a84;
+  color: var(--border-strong);
 }
 @keyframes chip-in {
   from { opacity: 0; transform: translateY(12px); }

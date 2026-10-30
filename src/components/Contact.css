@@ -1,10 +1,10 @@
 .contact-section {
-  background: radial-gradient(circle at 12% 90%, #294434 0, transparent 38%), var(--section-contact);
-  color: #f7faf4;
+  background: radial-gradient(circle at 12% 90%, #dcebd6 0, transparent 38%), var(--section-contact);
+  color: var(--text);
 }
 .contact-section .eyebrow,
 .contact-section .section-heading h2 span {
-  color: var(--lime);
+  color: var(--accent);
 }
 .contact-grid {
   display: grid;
@@ -19,7 +19,7 @@
 .contact-description {
   margin-top: 30px;
   max-width: 500px;
-  color: #d0ded1;
+  color: var(--muted);
   font-size: 1.06rem;
   line-height: 1.8;
 }
@@ -32,8 +32,8 @@
   margin-top: 36px;
   padding: 17px 20px;
   border-radius: 10px;
-  color: var(--ink);
-  background: var(--lime);
+  color: #fff;
+  background: var(--ink);
   font-size: clamp(0.9rem, 1.6vw, 1.08rem);
   font-weight: 700;
   transition: background 0.2s, transform 0.2s;
@@ -43,7 +43,7 @@
   overflow-wrap: anywhere;
 }
 .contact-email:hover {
-  background: #edffad;
+  background: var(--accent);
   transform: translateY(-2px);
 }
 .contact-note {
@@ -52,17 +52,18 @@
   align-items: center;
   gap: 10px;
   font-size: 0.75rem;
-  color: #d0ded1;
+  color: var(--muted);
 }
 .contact-note .status-dot {
-  background: var(--lime);
+  background: var(--accent);
 }
 .social-directory {
   padding: 34px;
-  border: 1px solid #ffffff36;
+  border: 1px solid var(--border);
   border-radius: 22px;
-  background: #ffffff0b;
-  color: #f7faf4;
+  background: #fff;
+  color: var(--text);
+  box-shadow: var(--shadow-sm);
 }
 .social-directory h3 {
   font-size: 1.2rem;
@@ -79,21 +80,21 @@
   gap: 12px;
   min-height: 72px;
   padding: 14px;
-  border: 1px solid #ffffff30;
+  border: 1px solid var(--border);
   border-radius: 12px;
-  background: #ffffff0c;
+  background: var(--surface);
   font-size: 0.86rem;
   font-weight: 500;
   transition: transform 0.2s, box-shadow 0.2s;
 }
 .social-card:hover {
   transform: translateY(-2px);
-  background: #ffffff18;
-  border-color: var(--lime);
+  background: var(--sage-light);
+  border-color: var(--accent);
 }
 .social-card > svg:last-child {
   margin-left: auto;
-  color: var(--lime);
+  color: var(--accent);
 }
 .social-card-icon {
   display: grid;
@@ -101,8 +102,8 @@
   flex: 0 0 38px;
   height: 38px;
   border-radius: 10px;
-  background: var(--lime);
-  color: var(--ink);
+  background: var(--sage-light);
+  color: var(--accent-hover);
 }
 @media (max-width: 1000px) {
   .contact-grid { gap: 32px; }
