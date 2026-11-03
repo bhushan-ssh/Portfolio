@@ -1,20 +1,22 @@
 .project-card {
   color: var(--text);
   border: 1px solid var(--border);
-  border-radius: 20px;
+  border-radius: var(--radius);
   overflow: hidden;
   background: var(--card-surface);
-  box-shadow: var(--shadow-sm);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   transition:
     transform 0.25s,
-    box-shadow 0.25s;
+    box-shadow 0.25s,
+    border-color 0.25s;
   min-width: 0;
 }
 .project-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 24px 52px #10251c23;
+  transform: translateY(-3px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
 }
 .project-image {
   border: 0;
@@ -121,6 +123,8 @@
   font-size: 0.77rem;
   font-weight: 600;
   margin-top: 24px;
+  padding-top: 18px;
+  border-top: 1px solid var(--border);
 }
 .project-detail {
   font-size: 0.75rem;
@@ -134,6 +138,9 @@
   gap: 20px;
   padding-top: 20px;
   margin-top: auto;
+}
+.project-links .text-link {
+  min-height: 40px;
 }
 .case-study-trigger {
   border: 0;
@@ -162,6 +169,7 @@
 }
 .compact .project-result {
   margin-top: 12px;
+  padding-top: 12px;
   font-size: 0.75rem;
 }
 .compact .tech-list {

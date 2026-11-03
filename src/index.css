@@ -98,16 +98,33 @@ main:focus {
 .eyebrow {
   margin-bottom: 20px;
 }
+.section-heading .eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.section-number {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--border-strong);
+  border-radius: 50%;
+  font-size: 0.65rem;
+  letter-spacing: 0;
+  font-variant-numeric: tabular-nums;
+}
 .small-label {
   font-size: 0.75rem;
   letter-spacing: 0.1em;
 }
 .section-heading h2 {
   font-size: var(--text-heading);
-  letter-spacing: -0.065em;
-  line-height: 1.06;
+  letter-spacing: -0.055em;
+  line-height: 1.12;
   font-weight: 600;
   max-width: 780px;
+  text-wrap: balance;
 }
 .section-heading h2 span {
   color: var(--accent);
@@ -163,8 +180,8 @@ main:focus {
   background: var(--accent);
 }
 .button-secondary {
-  border-color: var(--border-strong);
-  background: var(--white);
+  border-color: var(--border);
+  background: transparent;
   color: var(--text);
 }
 .button-secondary:hover {
@@ -216,7 +233,7 @@ main:focus {
   color: var(--muted);
   padding: 5px 10px;
   border: 1px solid var(--border);
-  border-radius: 5px;
+  border-radius: 6px;
   background: var(--surface);
 }
 .sr-only {

@@ -42,12 +42,15 @@ export default function Hero() {
         </a>
       </div>
       <div className="hero-visual">
-        <div className="portrait-grid" aria-hidden="true" />
+        <div className="portrait-label">
+          <span>DEVELOPER &amp; PROBLEM SOLVER</span>
+          <Icon name="sparkles" size={16} />
+        </div>
         <div className="photo-frame">
           <img
             src={asset("profile-800.webp")}
             srcSet={`${asset("profile-400.webp")} 400w, ${asset("profile-600.webp")} 600w, ${asset("profile-800.webp")} 800w`}
-            sizes="(max-width: 420px) 280px, (max-width: 1100px) 310px, 365px"
+            sizes="(max-width: 550px) calc(100vw - 72px), (max-width: 799px) 400px, 430px"
             width="800"
             height="1000"
             alt="Bhushan Sonawane outdoors"
@@ -56,24 +59,17 @@ export default function Hero() {
             className="profile-photo"
           />
           <div className="photo-caption">
-            <span className="status-dot" />
-            <span>Developer. Problem solver. Always learning.</span>
+            <span>Built with curiosity.</span>
+            <span>Always learning ↗</span>
           </div>
         </div>
-        <div className="floating-note note-top">
-          <Icon name="code" size={22} />
-          <div>
-            <strong>Built with curiosity.</strong>
-            <span>Python · Flask · React</span>
-          </div>
-        </div>
-        <div className="floating-note note-bottom">
+        <div className="portrait-award">
           <span className="note-icon">
             <Icon name="trophy" size={22} />
           </span>
           <div>
-            <strong>1st place</strong>
-            <span>SVIT HackVerse 2K26</span>
+            <strong>Hackathon winner</strong>
+            <span>1st place · SVIT HackVerse 2K26</span>
           </div>
         </div>
       </div>

@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 30;
-  background: #fcfcf6ed;
+  background: #fafbf7ed;
   backdrop-filter: blur(18px);
   border-bottom: 1px solid var(--border);
   transition: background 0.25s, border-color 0.25s;
@@ -16,7 +16,7 @@
 .brand {
   font-family: var(--font-heading);
   font-weight: 700;
-  font-size: 1.65rem;
+  font-size: 1.5rem;
   letter-spacing: -0.075em;
 }
 .brand span {

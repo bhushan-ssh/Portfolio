@@ -8,7 +8,7 @@ export default function SectionHeading({
   return (
     <div className="section-heading">
       <p className="eyebrow">
-        {number} / {label}
+        <span className="section-number">{number}</span> {label}
       </p>
       <h2>
         {title} {accent && <span>{accent}</span>}
