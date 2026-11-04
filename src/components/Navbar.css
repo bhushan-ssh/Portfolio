@@ -43,7 +43,7 @@
 .desktop-nav a[aria-current]:not(.nav-cta) {
   color: var(--accent-hover);
 }
-.desktop-nav a[aria-current]:not(.nav-cta)::after {
+.desktop-nav a:not(.nav-cta)::after {
   content: "";
   position: absolute;
   height: 2px;
@@ -51,6 +51,14 @@
   right: 12px;
   bottom: 4px;
   background: currentColor;
+  border-radius: 2px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 240ms var(--ease-out);
+}
+.desktop-nav a[aria-current]::after,
+.desktop-nav a:focus-visible::after {
+  transform: scaleX(1);
 }
 .desktop-nav .nav-cta,
 .nav-cta {

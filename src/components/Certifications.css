@@ -35,6 +35,11 @@
   border-bottom: 1px solid var(--border);
   color: var(--accent);
 }
+@media (prefers-reduced-motion: no-preference) {
+  .certificate-card:nth-child(n + 4) {
+    animation: rise-in 360ms var(--ease-out);
+  }
+}
 .certificate-preview img {
   min-height: 0;
   max-height: 178px;

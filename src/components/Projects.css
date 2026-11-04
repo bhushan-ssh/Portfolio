@@ -61,6 +61,11 @@
   display: grid;
   gap: 24px;
 }
+@media (prefers-reduced-motion: no-preference) {
+  .project-grid {
+    animation: rise-in 320ms var(--ease-out);
+  }
+}
 .project-group + .project-group {
   margin-top: 80px;
 }

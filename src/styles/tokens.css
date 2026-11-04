@@ -39,4 +39,6 @@
   --text-lg: 1.15rem;
   --text-heading: clamp(2.65rem, 4.5vw, 4rem);
   --nav-height: 80px;
+  --ease-out: cubic-bezier(0.2, 0.75, 0.25, 1);
+  --motion-enter: 560ms var(--ease-out);
 }

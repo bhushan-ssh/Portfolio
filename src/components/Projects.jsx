@@ -21,11 +21,11 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="section projects-section reveal"
+      className="section projects-section"
       aria-label="Selected projects"
     >
       <div className="container">
-        <div className="heading-row">
+        <div className="heading-row reveal">
           <SectionHeading
             number="02"
             label="SELECTED WORK"
@@ -62,7 +62,7 @@ export default function Projects() {
         {featuredProjects.length > 0 && (
           <div className="project-group">
             <h3 className="project-group-title">Featured projects</h3>
-            <div className="project-grid featured-project-grid">
+            <div className="project-grid featured-project-grid" key={filter}>
               {featuredProjects.map((project) => (
                 <ProjectCard
                   key={project.id}
@@ -82,7 +82,7 @@ export default function Projects() {
                 {moreProjects.length} {moreProjects.length === 1 ? "project" : "projects"}
               </span>
             </div>
-            <div className="project-grid more-projects-grid">
+            <div className="project-grid more-projects-grid" key={filter}>
               {moreProjects.map((project) => (
                 <ProjectCard
                   key={project.id}

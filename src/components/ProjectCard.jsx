@@ -6,7 +6,7 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
   const [failed, setFailed] = useState(false);
   const compact = !project.featured;
   return (
-    <article className={`project-card${compact ? " compact" : ""}`}>
+    <article className={`project-card reveal${compact ? " compact" : ""}`}>
       {!compact && (
         <button
           className={`project-image ${project.id}`}

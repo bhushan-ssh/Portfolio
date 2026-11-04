@@ -50,7 +50,7 @@
   bottom: 32px;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 0;
   padding: 8px;
   background: var(--white);
   color: var(--text);
@@ -60,11 +60,17 @@
   box-shadow: var(--shadow-sm);
 }
 .expand-hint > span {
-  display: none;
+  white-space: nowrap;
+  max-width: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-width 280ms var(--ease-out), margin 280ms var(--ease-out), opacity 200ms;
 }
 .project-image:hover .expand-hint > span,
 .project-image:focus-visible .expand-hint > span {
-  display: inline;
+  max-width: 9em;
+  margin-left: 8px;
+  opacity: 1;
 }
 .project-body {
   padding: 32px;

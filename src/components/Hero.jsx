@@ -58,18 +58,14 @@ export default function Hero() {
             loading="eager"
             className="profile-photo"
           />
-          <div className="photo-caption">
-            <span>Built with curiosity.</span>
-            <span>Always learning ↗</span>
-          </div>
-        </div>
-        <div className="portrait-award">
-          <span className="note-icon">
-            <Icon name="trophy" size={22} />
-          </span>
-          <div>
-            <strong>Hackathon winner</strong>
-            <span>1st place · SVIT HackVerse 2K26</span>
+          <div className="portrait-award">
+            <span className="note-icon">
+              <Icon name="trophy" size={22} />
+            </span>
+            <div>
+              <strong>Hackathon winner</strong>
+              <span>1st place · SVIT HackVerse 2K26</span>
+            </div>
           </div>
         </div>
       </div>

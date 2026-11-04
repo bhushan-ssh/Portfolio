@@ -6,11 +6,11 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="section section-band skills-section reveal"
+      className="section section-band skills-section"
       aria-label="Skills"
     >
       <div className="container">
-        <div className="heading-row">
+        <div className="heading-row reveal">
           <SectionHeading
             number="03"
             label="THE TOOLKIT"
@@ -23,7 +23,7 @@ export default function Skills() {
         </div>
         <div className="skills-grid">
           {skills.map((group) => (
-            <article className="skill-card" key={group.title}>
+            <article className="skill-card reveal" key={group.title}>
               <span className="skill-icon">
                 <Icon name={group.icon} size={24} />
               </span>
@@ -36,7 +36,7 @@ export default function Skills() {
             </article>
           ))}
         </div>
-        <div className="exploring">
+        <div className="exploring reveal">
           <span>
             <Icon name="sparkles" /> Currently exploring
           </span>

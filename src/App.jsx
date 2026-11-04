@@ -11,7 +11,7 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 export default function App() {
   useEffect(() => {
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    if (!("IntersectionObserver" in window) || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach(({ target, isIntersecting }) => {
@@ -21,15 +21,11 @@ export default function App() {
           }
         });
       },
-      { threshold: 0.08 },
+      { rootMargin: "0px 0px 24px" },
     );
-    // Read layout once before changing classes to avoid repeated forced layouts.
-    const elements = [...document.querySelectorAll(".reveal")];
-    const belowFold = elements.filter(
-      (element) => element.getBoundingClientRect().top > window.innerHeight,
-    );
-    belowFold.forEach((element) => element.classList.add("will-reveal"));
-    elements.forEach((element) => observer.observe(element));
+    document.querySelectorAll(".reveal").forEach((element) => {
+      if (element.getBoundingClientRect().top >= window.innerHeight) observer.observe(element);
+    });
     return () => observer.disconnect();
   }, []);
   return (

@@ -10,7 +10,7 @@ const selectedCount = 3;
 function CertificateCard({ certificate }) {
   const [failed, setFailed] = useState(false);
   return (
-    <article className="certificate-card">
+    <article className="certificate-card reveal">
       <div className="certificate-preview">
         {failed ? (
           <Icon name="award" size={44} />
@@ -50,11 +50,11 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="section certificates-section reveal"
+      className="section certificates-section"
       aria-label="Certifications"
     >
       <div className="container">
-        <div className="heading-row">
+        <div className="heading-row reveal">
           <SectionHeading
             number="04"
             label="LEARNING, VALIDATED"

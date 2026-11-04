@@ -3,6 +3,20 @@ import Icon from "./Icon";
 import "./Modal.css";
 export default function Modal({ label, onClose, children, className = "" }) {
   const ref = useRef(null);
+  function dismiss() {
+    const dialog = ref.current;
+    if (dialog.dataset.closing) return;
+    dialog.dataset.closing = "true";
+    const exit = dialog.getAnimations().find((animation) => animation.animationName === "dialog-out");
+    if (exit) {
+      // A change to reduced motion can cancel the exit while it is playing.
+      exit.finished.catch(() => {}).then(() => {
+        if (dialog.open) onClose();
+      });
+    } else {
+      onClose();
+    }
+  }
   useEffect(() => {
     const dialog = ref.current;
     const previousFocus = document.activeElement;
@@ -39,17 +53,17 @@ export default function Modal({ label, onClose, children, className = "" }) {
       }}
       onCancel={(event) => {
         event.preventDefault();
-        onClose();
+        dismiss();
       }}
       onClick={(event) => {
-        if (event.target === event.currentTarget) onClose();
+        if (event.target === event.currentTarget) dismiss();
       }}
     >
       <div className="modal-panel">
         <button
           className="icon-button modal-close"
           aria-label={`Close ${label}`}
-          onClick={onClose}
+          onClick={dismiss}
           autoFocus
         >
           <Icon name="close" />

@@ -8,6 +8,11 @@
   color: var(--text);
 }
 .hero-content { position: relative; }
+.hero::before {
+  background:
+    radial-gradient(ellipse at 86% 43%, #e2ecd9 0%, transparent 55%),
+    var(--section-hero);
+}
 .availability {
   display: inline-flex;
   align-items: center;
@@ -16,6 +21,10 @@
   font-size: 0.65rem;
   letter-spacing: 0.1em;
   font-weight: 600;
+  padding: 6px 12px;
+  border: 1px solid #cbdac6;
+  border-radius: 100px;
+  background: #f1f6eb;
 }
 .hero-hello { margin: 36px 0 16px; }
 .hero h1 {
@@ -60,6 +69,17 @@
   max-width: 430px;
   justify-self: end;
   padding: 0;
+  isolation: isolate;
+}
+.hero-visual::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 16% -10px -7px 7%;
+  border: 1px solid #bacbb3;
+  border-radius: 20px;
+  background: repeating-linear-gradient(135deg, #e3ebdb 0 5px, #d3e0ca 5px 6px);
+  transform: rotate(2deg);
 }
 .portrait-label {
   display: flex;
@@ -73,42 +93,24 @@
 }
 .photo-frame {
   position: relative;
-  padding: 8px;
-  border: 1px solid var(--border);
+  overflow: hidden;
+  border: 5px solid var(--card-surface);
   border-radius: 18px;
-  background: #fff;
-  box-shadow: var(--shadow-sm);
+  background: var(--ink);
+  box-shadow: var(--shadow-lg);
 }
 .profile-photo {
   width: 100%;
   height: 440px;
   object-fit: cover;
   object-position: center 38%;
-  border-radius: 11px;
 }
-.photo-caption {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
-  padding: 15px 8px 7px;
-  color: var(--muted);
-  font-size: 0.68rem;
-}
-.photo-caption > :first-child { color: var(--text); font-weight: 500; }
 .portrait-award {
-  position: relative;
-  width: fit-content;
-  margin-top: 14px;
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 15px 22px 15px 15px;
-  border: 1px solid #ffffff1f;
-  border-radius: 12px;
+  padding: 16px 20px;
   color: #fff;
-  background: var(--ink);
-  box-shadow: var(--shadow-lg);
 }
 .portrait-award strong { display: block; font-size: 0.8rem; font-weight: 600; }
 .portrait-award div > span { display: block; margin-top: 3px; font-size: 0.68rem; color: #d1dfd2; }
@@ -142,6 +144,14 @@
 .hero-bottom a { letter-spacing: 0.12em; white-space: nowrap; }
 .hero-bottom a:hover { color: var(--accent-hover); }
 .hero-divider { margin-inline: 8px; color: var(--border-strong); }
+@media (prefers-reduced-motion: no-preference) {
+  .hero-content > *, .hero-visual {
+    animation: rise-in var(--motion-enter) backwards;
+  }
+  .hero h1, .hero-visual { animation-delay: 60ms; }
+  .role-line, .hero-description { animation-delay: 110ms; }
+  .hero-actions, .hero-contact { animation-delay: 170ms; }
+}
 @media (max-width: 1100px) {
   .hero { column-gap: 40px; padding-top: 60px; }
   .hero h1 { font-size: clamp(4rem, 7.3vw, 5.7rem); }
@@ -168,7 +178,6 @@
   .hero-actions { flex-direction: column; align-items: stretch; margin-top: 26px; }
   .profile-photo { height: 350px; }
   .portrait-label { font-size: 0.56rem; }
-  .photo-caption { font-size: 0.6rem; gap: 4px; padding-inline: 3px; }
   .hero-bottom p { display: block; line-height: 2; }
   .hero-bottom p > svg { vertical-align: middle; margin-right: 8px; }
 }

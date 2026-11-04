@@ -6,11 +6,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="section section-band about-section reveal"
+      className="section section-band about-section"
       aria-label="About me"
     >
       <div className="container about-grid">
-        <div>
+        <div className="reveal">
           <SectionHeading
             number="01"
             label="ABOUT ME"
@@ -29,7 +29,7 @@ export default function About() {
             </p>
           </div>
         </div>
-        <div className="about-copy">
+        <div className="about-copy reveal">
           <p className="lead">
             I&apos;m a developer and a Data Science student at IIT Madras,
             interested in building reliable applications from the database to

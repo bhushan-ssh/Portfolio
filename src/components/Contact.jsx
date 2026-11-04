@@ -7,11 +7,11 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="section contact-section reveal"
+      className="section contact-section"
       aria-label="Contact"
     >
       <div className="container contact-grid">
-        <div>
+        <div className="reveal">
           <SectionHeading
             number="06"
             label="WHAT’S NEXT?"
@@ -30,7 +30,7 @@ export default function Contact() {
             opportunities
           </div>
         </div>
-        <div className="social-directory" aria-label="Social accounts">
+        <div className="social-directory reveal" aria-label="Social accounts">
           <h3>Find me online</h3>
           <div className="social-directory-grid">
             {socials.map((social) => (

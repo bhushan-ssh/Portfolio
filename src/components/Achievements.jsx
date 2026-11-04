@@ -41,7 +41,7 @@ export default function Achievements() {
   return (
     <section
       id="achievements"
-      className="section section-band achievements-section reveal"
+      className="section section-band achievements-section"
       aria-label="Achievements"
     >
       <div className="container">
@@ -51,7 +51,7 @@ export default function Achievements() {
           title="Small steps."
           accent="Meaningful progress."
         />
-        <div className="achievement-strip">
+        <div className="achievement-strip reveal">
           {achievements.map((item) => (
             <div key={item.label}>
               <Icon name={item.icon} size={24} />
