@@ -57,7 +57,7 @@ export default function Achievements() {
               <Icon name={item.icon} size={24} />
               <Counter item={item} />
               <h3>{item.label}</h3>
-              <p>{item.detail}</p>
+              {item.detail && <p>{item.detail}</p>}
             </div>
           ))}
         </div>

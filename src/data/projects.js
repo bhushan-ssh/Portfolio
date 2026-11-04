@@ -9,7 +9,8 @@ export const projects = [
     description:
       "A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.",
     tech: ["Python", "Machine Learning", "LSTM"],
-    result: "85% accuracy · 1st place at SVIT HackVerse 2K26",
+    // TODO(Bhushan): add real metric — RUL RMSE/MAE, or "85% failure-classification accuracy" if that's what it measured.
+    result: "1st place at SVIT HackVerse 2K26 · LSTM-based RUL prediction",
     detail:
       "Led a 4-person team to turn machine sensor data into maintenance insights.",
     repo: "https://github.com/bhushan-ssh/Uptime",
@@ -26,7 +27,7 @@ export const projects = [
     description:
       "A career platform connecting students with opportunities, featuring role-based access and REST APIs.",
     tech: ["Vue 3", "Flask-RESTful", "SQLAlchemy", "SQLite", "Redis", "Celery"],
-    result: "Designed to connect 500+ students",
+    result: "Role-based student, company & admin workflows",
     repo: "https://github.com/bhushan-ssh/CareerLink",
     image: "projects/careerlink.webp",
     width: 1440,
@@ -44,7 +45,7 @@ export const projects = [
         "Added Redis and Celery for caching, CSV exports, interview reminders, and scheduled reports.",
       ],
       outcome:
-        "The project demonstrates the placement lifecycle end to end, including application status tracking and async exports. The 500+ student figure is a design target, not a measured user count.",
+        "The project demonstrates the placement lifecycle end to end, including application status tracking and async exports.",
     },
   },
   {
@@ -55,7 +56,7 @@ export const projects = [
     description:
       "A quiz management application with CRUD functionality, session handling, and role-based access control.",
     tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
-    result: "Built to support 100+ concurrent users",
+    result: "Quiz attempts, scoring & performance analytics",
     repo: "https://github.com/bhushan-ssh/Quizmaster",
     image: "projects/quizmaster.webp",
     width: 1440,

@@ -6,11 +6,12 @@
 }
 .achievement-strip {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(6, minmax(0, 1fr));
   gap: 18px;
   margin-top: 50px;
 }
 .achievement-strip > div {
+  grid-column: span 2;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -42,11 +43,18 @@
   color: var(--muted);
   font-size: 0.82rem;
 }
+@media (min-width: 851px) {
+  .achievement-strip > :nth-last-child(2):nth-child(3n + 1),
+  .achievement-strip > :last-child:nth-child(3n + 2) {
+    grid-column: span 3;
+  }
+}
 @media (max-width: 850px) {
   .achievement-strip {
     grid-template-columns: 1fr;
   }
   .achievement-strip > div {
+    grid-column: auto;
     min-height: 190px;
   }
 }
