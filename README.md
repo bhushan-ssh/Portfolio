@@ -62,7 +62,7 @@ For a GitHub Pages project path, build with:
 npm run build -- --base=/portfolio/
 ```
 
-You can also set `VITE_BASE_PATH` in the build process environment. Before publishing, replace `https://example.com` in `index.html`, `public/robots.txt`, and `public/sitemap.xml` with the final public URL. The site uses fragment navigation and does not need an SPA rewrite.
+You can also set `VITE_BASE_PATH` in the build process environment. If the public domain changes, update the absolute URLs in `index.html`, `public/robots.txt`, and `public/sitemap.xml`. The site uses fragment navigation and does not need an SPA rewrite.
 
 ## Optional browser checks
 

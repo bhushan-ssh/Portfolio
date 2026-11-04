@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
 
-# Replace this placeholder before publishing.
-Sitemap: https://example.com/sitemap.xml
+Sitemap: https://portfolio-plum-beta-63.vercel.app/sitemap.xml
