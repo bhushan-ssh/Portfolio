@@ -24,7 +24,8 @@ export default defineConfig({
       },
       configureServer(server) {
         server.middlewares.use((req, res, next) => {
-          const file = req.url?.split("?")[0]?.slice(1);
+          const path = req.url?.split("?")[0];
+          const file = path?.startsWith(server.config.base) ? path.slice(server.config.base.length) : undefined;
           if (!Object.hasOwn(crawlerFiles, file)) return next();
           res.setHeader("Content-Type", file.endsWith(".xml") ? "application/xml" : "text/plain");
           res.end(crawlerFiles[file]);
