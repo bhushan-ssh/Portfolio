@@ -56,7 +56,7 @@ export default function Hero() {
           <img
             src={asset("profile-800.webp")}
             srcSet={`${asset("profile-400.webp")} 400w, ${asset("profile-600.webp")} 600w, ${asset("profile-800.webp")} 800w`}
-            sizes="(max-width: 550px) calc(100vw - 72px), (max-width: 799px) 400px, 430px"
+            sizes="(max-width: 550px) calc(100vw - 72px), (max-width: 799px) 400px, 410px"
             width="800"
             height="1000"
             alt="Bhushan Sonawane outdoors"

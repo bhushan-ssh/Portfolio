@@ -8,6 +8,8 @@ export const certifications = [
     kind: "Academic",
     pdf: "certs/advance-certificate-ml-ds.pdf",
     thumbnail: "certs/thumbs/advance-certificate-ml-ds.webp",
+    width: 636,
+    height: 450,
   },
   {
     id: "advance-certificate-p-ad",
@@ -16,6 +18,8 @@ export const certifications = [
     kind: "Academic",
     pdf: "certs/advance-certificate-p-ad.pdf",
     thumbnail: "certs/thumbs/advance-certificate-p-ad.webp",
+    width: 636,
+    height: 450,
   },
   {
     id: "foundation-certificate",
@@ -24,6 +28,8 @@ export const certifications = [
     kind: "Academic",
     pdf: "certs/foundation-certificate.pdf",
     thumbnail: "certs/thumbs/foundation-certificate.webp",
+    width: 637,
+    height: 450,
     date: "15 May 2024",
   },
   {
@@ -33,6 +39,8 @@ export const certifications = [
     kind: "Workshop",
     pdf: "certs/build-your-own-llm-certificate.pdf",
     thumbnail: "certs/thumbs/build-your-own-llm-certificate.webp",
+    width: 640,
+    height: 360,
   },
   {
     id: "chart-deconstruction-certificate",
@@ -41,6 +49,8 @@ export const certifications = [
     kind: "Workshop",
     pdf: "certs/chart-deconstruction-certificate.pdf",
     thumbnail: "certs/thumbs/chart-deconstruction-certificate.webp",
+    width: 640,
+    height: 360,
   },
   {
     id: "testing-big-data-and-applications-certificate",
@@ -50,6 +60,8 @@ export const certifications = [
     pdf: "certs/testing-big-data-and-applications-certificate.pdf",
     thumbnail:
       "certs/thumbs/testing-big-data-and-applications-certificate.webp",
+    width: 640,
+    height: 360,
   },
   {
     id: "ropewalker-digital-certificate",
@@ -58,6 +70,8 @@ export const certifications = [
     kind: "Participation",
     pdf: "certs/ropewalker-digital-certificate.pdf",
     thumbnail: "certs/thumbs/ropewalker-digital-certificate.webp",
+    width: 638,
+    height: 450,
   },
   {
     id: "sql-advanced-certificate",
@@ -66,6 +80,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/sql-advanced-certificate.pdf",
     thumbnail: "certs/thumbs/sql-advanced-certificate.webp",
+    width: 590,
+    height: 450,
     date: "11 February 2026",
   },
   {
@@ -75,6 +91,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/java-basic-certificate.pdf",
     thumbnail: "certs/thumbs/java-basic-certificate.webp",
+    width: 590,
+    height: 450,
     date: "12 April 2026",
   },
   {
@@ -84,6 +102,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/sde-intern-certificate.pdf",
     thumbnail: "certs/thumbs/sde-intern-certificate.webp",
+    width: 590,
+    height: 450,
     date: "24 June 2026",
   },
   {
@@ -93,6 +113,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/sql-basic-certificate.pdf",
     thumbnail: "certs/thumbs/sql-basic-certificate.webp",
+    width: 590,
+    height: 450,
     date: "1 January 2026",
   },
   {
@@ -102,6 +124,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/sql-intermediate-certificate.pdf",
     thumbnail: "certs/thumbs/sql-intermediate-certificate.webp",
+    width: 590,
+    height: 450,
     date: "8 February 2026",
   },
   {
@@ -111,6 +135,8 @@ export const certifications = [
     kind: "Certification",
     pdf: "certs/intro-to-cloud-computing-certificate.pdf",
     thumbnail: "certs/thumbs/intro-to-cloud-computing-certificate.webp",
+    width: 636,
+    height: 450,
     date: "30 June 2026",
   },
   {
@@ -120,6 +146,8 @@ export const certifications = [
     kind: "Competition",
     pdf: "certs/hackverse-2026-certificate.pdf",
     thumbnail: "certs/thumbs/hackverse-2026-certificate.webp",
+    width: 597,
+    height: 450,
     date: "24–25 April 2026",
   },
   {
@@ -129,6 +157,8 @@ export const certifications = [
     kind: "Participation",
     pdf: "certs/spark-2025-certificate.pdf",
     thumbnail: "certs/thumbs/spark-2025-certificate.webp",
+    width: 640,
+    height: 449,
     date: "16 April 2025",
   },
   {
@@ -138,6 +168,8 @@ export const certifications = [
     kind: "Participation",
     pdf: "certs/sunhacks-certificate.pdf",
     thumbnail: "certs/thumbs/sunhacks-certificate.webp",
+    width: 595,
+    height: 421,
     date: "21–23 August 2025",
   },
   {
@@ -147,6 +179,8 @@ export const certifications = [
     kind: "Participation",
     pdf: "certs/techfusion-2025-certificate-1.pdf",
     thumbnail: "certs/thumbs/techfusion-2025-certificate-1.webp",
+    width: 628,
+    height: 450,
     date: "4 April 2025",
   },
   {
@@ -156,6 +190,8 @@ export const certifications = [
     kind: "Competition",
     pdf: "certs/techfusion-2025-certificate-2.pdf",
     thumbnail: "certs/thumbs/techfusion-2025-certificate-2.webp",
+    width: 625,
+    height: 450,
     date: "4 April 2025",
   },
   {
@@ -165,6 +201,8 @@ export const certifications = [
     kind: "Participation",
     pdf: "certs/technofest-2026-certificate.pdf",
     thumbnail: "certs/thumbs/technofest-2026-certificate.webp",
+    width: 586,
+    height: 450,
     date: "18 April 2026",
   },
   {
@@ -175,6 +213,8 @@ export const certifications = [
     kind: "School",
     pdf: "certs/hsc-certificate.pdf",
     thumbnail: "certs/thumbs/hsc-certificate.webp",
+    width: 312,
+    height: 450,
     date: "25 May 2023",
   },
   {
@@ -185,6 +225,8 @@ export const certifications = [
     kind: "School",
     pdf: "certs/ssc-certificate.pdf",
     thumbnail: "certs/thumbs/ssc-certificate.webp",
+    width: 311,
+    height: 450,
     date: "16 July 2021",
   },
 ];

@@ -80,7 +80,7 @@ export const projects = [
     detail:
       "Combines XGBoost and CatBoost predictions with non-negative least-squares blending.",
     repo: "https://github.com/bhushan-ssh/Heavy_Equipment_Selling_Price_Prediction",
-    image: "projects/heavy_equipement_price_prediction.jpg",
+    image: "projects/heavy_equipement_price_prediction.webp",
     width: 800,
     height: 766,
     alt: "Heavy equipment selling price prediction project preview",
@@ -111,7 +111,7 @@ export const projects = [
     result: "81.56% validation accuracy",
     repo: "https://github.com/bhushan-ssh/Titanic_Survival_Prediction",
     demo: "https://bhushan-titanic-ml.streamlit.app/",
-    image: "projects/titatic_survival_prediction.jpg",
+    image: "projects/titatic_survival_prediction.webp",
     width: 1280,
     height: 853,
     alt: "Titanic survival prediction project preview",
@@ -130,7 +130,7 @@ export const projects = [
     detail:
       "A weighted ensemble combines neural models for top-three answer ranking.",
     repo: "https://github.com/bhushan-ssh/Smart_MCQ_Solver",
-    image: "projects/smart_mcq_solver.jpg",
+    image: "projects/smart_mcq_solver.webp",
     width: 1280,
     height: 720,
     alt: "Smart MCQ Solver project preview",

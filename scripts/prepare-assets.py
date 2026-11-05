@@ -4,8 +4,8 @@ Original images/PDFs are preserved; optimized assets are committed for normal bu
 from pathlib import Path
 from io import BytesIO
 import time
+import sys
 from PIL import Image, ImageOps, ImageDraw, ImageFont
-import pypdfium2 as pdfium
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC = ROOT / 'public'
@@ -28,18 +28,24 @@ def save_asset(image, path, **options):
                 raise
             time.sleep(0.1)
 
-for source in [PUBLIC / 'profile.jpg', *(PUBLIC / 'projects').glob('*.png')]:
+for source in [PUBLIC / 'profile.jpg', *(PUBLIC / 'projects').glob('*.png'), *(PUBLIC / 'projects').glob('*.jpg')]:
     image = ImageOps.exif_transpose(Image.open(source)).convert('RGB')
     image.thumbnail((960, 1440) if source.name == 'profile.jpg' else (1440, 900))
     save_asset(image, source.with_suffix('.webp'), quality=85, method=6)
     if source.name != 'profile.jpg':
-        image.thumbnail((640, 420))
-        save_asset(image, source.with_name(source.stem + '-640.webp'), quality=80, method=6)
+        for width in [480, 640]:
+            thumbnail = image.resize((width, round(width * image.height / image.width)), Image.Resampling.LANCZOS)
+            save_asset(thumbnail, source.with_name(f'{source.stem}-{width}.webp'), quality=80, method=6)
 
 portrait = ImageOps.exif_transpose(Image.open(PUBLIC / 'profile.jpg')).convert('RGB')
 for width in [400, 600, 800]:
     cropped = ImageOps.fit(portrait, (width, width * 5 // 4), centering=(0.5, 0.38))
-    save_asset(cropped, PUBLIC / f'profile-{width}.webp', quality=70, method=6)
+    save_asset(cropped, PUBLIC / f'profile-{width}.webp', quality=55, method=6)
+
+if '--images-only' in sys.argv:
+    sys.exit(0)
+
+import pypdfium2 as pdfium
 
 thumbs = PUBLIC / 'certs' / 'thumbs'
 thumbs.mkdir(exist_ok=True)
@@ -50,6 +56,9 @@ for source in (PUBLIC / 'certs').glob('*.pdf'):
         image = image.rotate(90, expand=True)
     image.thumbnail((640, 450))
     save_asset(image, thumbs / f'{source.stem}.webp', quality=78, method=6)
+    if image.width > 320:
+        image.thumbnail((320, 450))
+        save_asset(image, thumbs / f'{source.stem}-320.webp', quality=78, method=6)
     document.close()
 
 # A simple typographic social card, not a fabricated project screenshot.

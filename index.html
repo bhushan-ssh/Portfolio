@@ -57,14 +57,11 @@
       sizes="180x180"
       href="%BASE_URL%apple-touch-icon.png"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-      media="print"
-      onload="this.media='all'"
-    />
+    <link rel="preload" as="font" type="font/woff2" href="%BASE_URL%fonts/space-grotesk-latin.woff2" crossorigin />
+    <link rel="preload" as="image" href="%BASE_URL%profile-800.webp"
+      imagesrcset="%BASE_URL%profile-400.webp 400w, %BASE_URL%profile-600.webp 600w, %BASE_URL%profile-800.webp 800w"
+      imagesizes="(max-width: 550px) calc(100vw - 72px), (max-width: 799px) 400px, 410px"
+      fetchpriority="high" />
     <!-- PERSON_SCHEMA -->
   </head>
   <body>

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { projects } from "../data/projects";
-import { asset } from "../data/assets";
+import { asset, projectImageSrcSet } from "../data/assets";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import Modal from "./Modal";
@@ -104,6 +104,8 @@ export default function Projects() {
             <p>{selected.subtitle}</p>
             <img
               src={asset(selected.image)}
+              srcSet={projectImageSrcSet(selected)}
+              sizes="(max-width: 700px) 90vw, 1000px"
               alt={selected.alt}
               width={selected.width}
               height={selected.height}
@@ -131,6 +133,8 @@ export default function Projects() {
               <div className="case-study-visual">
                 <img
                   src={asset(selected.image)}
+                  srcSet={projectImageSrcSet(selected)}
+                  sizes="(max-width: 700px) 85vw, 900px"
                   alt={selected.alt}
                   width={selected.width}
                   height={selected.height}

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { asset } from "../data/assets";
+import { asset, projectImageSrcSet } from "../data/assets";
 import Icon from "./Icon";
 import "./ProjectCard.css";
 export default function ProjectCard({ project, onPreview, onCaseStudy }) {
@@ -23,12 +23,10 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
           ) : (
             <img
               src={asset(project.image)}
-              srcSet={
-                project.image.endsWith(".webp")
-                  ? `${asset(project.image.replace(".webp", "-640.webp"))} 640w, ${asset(project.image)} ${project.width}w`
-                  : undefined
-              }
-              sizes="(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"
+              srcSet={projectImageSrcSet(project)}
+              sizes={compact
+                ? "(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 40vw, 340px"
+                : "(max-width: 650px) calc(100vw - 72px), (max-width: 900px) 75vw, 520px"}
               alt={project.alt}
               width={project.width}
               height={project.height}

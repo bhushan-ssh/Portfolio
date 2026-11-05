@@ -150,7 +150,7 @@
   margin-top: auto;
 }
 .project-links .text-link {
-  min-height: 40px;
+  min-height: 44px;
 }
 .case-study-trigger {
   border: 0;
@@ -160,9 +160,6 @@
 }
 .project-body .tech-list {
   margin-top: 20px;
-}
-.project-card.compact {
-  padding: 0;
 }
 .compact .project-body {
   padding: 24px;

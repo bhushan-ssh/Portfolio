@@ -17,8 +17,12 @@ function CertificateCard({ certificate }) {
         ) : (
           <img
             src={asset(certificate.thumbnail)}
-            width="640"
-            height="450"
+            srcSet={certificate.width > 320
+              ? `${asset(certificate.thumbnail.replace(".webp", "-320.webp"))} 320w, ${asset(certificate.thumbnail)} ${certificate.width}w`
+              : undefined}
+            sizes="(max-width: 550px) calc(100vw - 84px), (max-width: 900px) 40vw, 320px"
+            width={certificate.width}
+            height={certificate.height}
             loading="lazy"
             alt={`Preview of ${certificate.title} certificate`}
             onError={() => setFailed(true)}

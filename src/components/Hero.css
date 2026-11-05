@@ -159,6 +159,7 @@
 }
 .hero-bottom p > svg, .hero-bottom a > svg { color: var(--accent); }
 .hero-bottom a { letter-spacing: 0.12em; white-space: nowrap; }
+.hero-bottom a { min-height: 44px; }
 .hero-bottom a:hover { color: var(--accent-hover); }
 .hero-divider { margin-inline: 8px; color: var(--border-strong); }
 @media (prefers-reduced-motion: no-preference) {
