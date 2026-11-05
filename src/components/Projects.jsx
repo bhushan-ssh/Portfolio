@@ -56,7 +56,7 @@ export default function Projects() {
             </button>
           ))}
         </div>
-        <p className="sr-only" role="status">
+        <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
           Showing {visible.length} {filter === "All" ? "" : filter} projects
         </p>
         {featuredProjects.length > 0 && (
@@ -87,6 +87,7 @@ export default function Projects() {
                 <ProjectCard
                   key={project.id}
                   project={project}
+                  onPreview={() => setActiveModal({ type: "preview", project })}
                   onCaseStudy={() => setActiveModal({ type: "caseStudy", project })}
                 />
               ))}

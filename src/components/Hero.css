@@ -63,6 +63,17 @@
   margin-top: 30px;
 }
 .hero-contact { margin-top: 24px; font-size: 0.78rem; }
+.hero-proof {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 16px;
+  max-width: 450px;
+  color: var(--accent-hover);
+  font-size: 0.8rem;
+  line-height: 1.7;
+}
+.hero-proof svg { margin-top: 3px; }
 .hero-visual {
   position: relative;
   width: 100%;
@@ -181,9 +192,18 @@
   .hero h1 { font-size: clamp(3.25rem, 13.5vw, 4.7rem); }
   .role-line { margin-top: 24px; line-height: 1.6; }
   .hero-description { font-size: 1rem; }
-  .hero-actions { flex-direction: column; align-items: stretch; margin-top: 26px; }
+  .hero-actions { margin-top: 20px; }
   .profile-photo { height: 390px; }
   .portrait-label { font-size: 0.56rem; }
   .hero-bottom p { display: block; line-height: 2; }
   .hero-bottom p > svg { vertical-align: middle; margin-right: 8px; }
+}
+@media (max-width: 550px) {
+  .hero { padding-top: 28px; }
+  .hero-hello { margin: 20px 0 12px; }
+  .role-line { margin-top: 20px; }
+  .hero-description { margin-top: 14px; line-height: 1.6; }
+  .hero-actions { display: grid; grid-template-columns: 1fr 1.15fr; gap: 10px; }
+  .hero-actions .button { min-height: 48px; padding: 12px 8px; gap: 6px; font-size: 0.75rem; }
+  .hero-actions .button svg { width: 15px; }
 }

@@ -1,5 +1,7 @@
 import Icon from "./Icon";
 import { asset } from "../data/assets";
+import { projects } from "../data/projects";
+import { achievements } from "../data/achievements";
 import "./Hero.css";
 export default function Hero() {
   return (
@@ -25,9 +27,13 @@ export default function Hero() {
         <p className="hero-description">
           I turn complex ideas into useful products with thoughtful code and data.
         </p>
+        <p className="hero-proof">
+          <Icon name="trophy" size={16} />
+          <span>Hackathon winner · {projects.length} shipped projects · {achievements.find((item) => item.count)?.value} DSA problems</span>
+        </p>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">
-            Explore my work <Icon name="downRight" />
+            View projects <Icon name="downRight" />
           </a>
           <a
             className="button button-secondary"

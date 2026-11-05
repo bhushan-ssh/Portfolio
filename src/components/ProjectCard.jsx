@@ -7,10 +7,10 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
   const compact = !project.featured;
   return (
     <article className={`project-card reveal${compact ? " compact" : ""}`}>
-      {!compact && (
+      {project.image && (
         <button
           className={`project-image ${project.id}`}
-          aria-label={`View ${project.title} screenshot`}
+          aria-label={`View screenshot of ${project.title}`}
           disabled={failed}
           onClick={onPreview}
         >
@@ -51,33 +51,36 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
             </span>
           )}
         </div>
-        <h3>
+        <h4>
           {project.title}
           <span aria-hidden="true">↗</span>
-        </h3>
+        </h4>
         <p className="project-subtitle">{project.subtitle}</p>
-        {!compact && (
-          <p className="project-description">{project.description}</p>
-        )}
-        <div className="tech-list">
-          {(compact ? project.tech.slice(0, 3) : project.tech).map((item) => (
-            <span key={item}>{item}</span>
-          ))}
-        </div>
+        <p className="project-description">
+          <strong>Problem</strong> {project.problem}
+        </p>
+        <p className="project-description">
+          <strong>Built</strong> {project.description}
+        </p>
         <div className="project-result">
           <Icon name={project.award ? "trophy" : "check"} size={17} />
           <span>{project.result}</span>
         </div>
-        {!compact && project.detail && (
+        {project.detail && (
           <p className="project-detail">{project.detail}</p>
         )}
+        <div className="tech-list" aria-label="Technology stack">
+          {project.tech.map((item) => (
+            <span key={item}>{item}</span>
+          ))}
+        </div>
         <div className="project-links">
           {project.caseStudy && (
             <button
               className="text-link case-study-trigger"
               type="button"
               onClick={onCaseStudy}
-              aria-label={`Read ${project.title} case study`}
+              aria-label={`Case study: ${project.title}`}
             >
               Case study <Icon name="arrow" size={16} />
             </button>
@@ -87,9 +90,9 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
             href={project.repo}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={`View source: ${project.title} on GitHub`}
+            aria-label={`Code for ${project.title} on GitHub`}
           >
-            <Icon name="github" size={17} /> View source{" "}
+            <Icon name="github" size={17} /> Code{" "}
             <Icon name="arrow" size={16} />
           </a>
           {project.demo && (

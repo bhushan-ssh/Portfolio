@@ -34,6 +34,15 @@
 .quick-facts svg {
   color: var(--accent);
 }
+.currently-building {
+  margin-block: 28px;
+  padding: 20px;
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+.currently-building h3 { font-size: 0.95rem; margin-bottom: 8px; }
+.currently-building p { color: var(--muted); font-size: 0.85rem; }
 @media (max-width: 900px) {
   .about-grid {
     gap: 40px;

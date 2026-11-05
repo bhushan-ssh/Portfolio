@@ -52,17 +52,17 @@ const pass = (name) => {
     assert.equal(await page.locator(".project-card").count(), 6);
     pass("Project filters");
 
-    await page.getByRole("button", { name: "View Uptime screenshot" }).click();
+    await page.getByRole("button", { name: "View screenshot of Uptime" }).click();
     assert.ok(await page.getByRole("dialog", { name: "Uptime screenshot" }).isVisible());
     await page.keyboard.press("Escape");
     assert.equal(await page.locator("dialog").count(), 0);
     assert.equal(
       await page.locator(":focus").getAttribute("aria-label"),
-      "View Uptime screenshot",
+      "View screenshot of Uptime",
     );
     pass("Screenshot dialog and focus restoration");
 
-    await page.getByRole("button", { name: "Read Heavy Equipment Price Prediction case study" }).click();
+    await page.getByRole("button", { name: "Case study: Heavy Equipment Price Prediction" }).click();
     assert.ok(
       await page.getByRole("dialog", { name: "Heavy Equipment Price Prediction case study" }).isVisible(),
     );

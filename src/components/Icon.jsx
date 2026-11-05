@@ -18,6 +18,7 @@ import {
   Expand,
   Sparkles,
   ChevronDown,
+  Copy,
 } from "lucide-react";
 const icons = {
   arrow: ArrowUpRight,
@@ -39,6 +40,7 @@ const icons = {
   expand: Expand,
   sparkles: Sparkles,
   chevron: ChevronDown,
+  copy: Copy,
 };
 export default function Icon({ name, size = 18, ...props }) {
   if (name === "github")

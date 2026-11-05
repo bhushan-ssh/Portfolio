@@ -6,6 +6,7 @@ export const projects = [
     featured: true,
     award: "HACKATHON WINNER",
     subtitle: "AI-powered predictive maintenance",
+    problem: "Estimate equipment life from sensor data to help anticipate failures.",
     description:
       "A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.",
     tech: ["Python", "LSTM", "Streamlit", "Plotly"],
@@ -24,6 +25,7 @@ export const projects = [
     title: "CareerLink",
     category: "Web",
     subtitle: "Connecting students with opportunities",
+    problem: "Coordinate campus placements across students, companies, and administrators.",
     description:
       "A career platform connecting students with opportunities, featuring role-based access and REST APIs.",
     tech: ["Vue 3", "Flask-RESTful", "SQLAlchemy", "SQLite", "Redis", "Celery"],
@@ -53,6 +55,7 @@ export const projects = [
     title: "QuizMaster",
     category: "Web",
     subtitle: "A better way to manage quizzes",
+    problem: "Organize quizzes and help students track their performance.",
     description:
       "A quiz management application with CRUD functionality, session handling, and role-based access control.",
     tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "Jinja2", "Bootstrap"],
@@ -69,6 +72,7 @@ export const projects = [
     category: "Machine Learning",
     featured: true,
     subtitle: "Predicting used equipment selling prices",
+    problem: "Estimate used equipment prices from specifications, age, and usage.",
     description:
       "An end-to-end regression pipeline that estimates resale prices from equipment specifications, usage, and transaction data.",
     tech: ["Python", "Pandas", "XGBoost", "CatBoost", "scikit-learn"],
@@ -100,6 +104,7 @@ export const projects = [
     title: "Titanic Survival Prediction",
     category: "Machine Learning",
     subtitle: "An interactive passenger survival predictor",
+    problem: "Predict passenger survival from historical Titanic passenger data.",
     description:
       "A classification workflow with exploratory analysis, feature engineering, model comparison, and an interactive Streamlit app.",
     tech: ["Python", "Pandas", "scikit-learn", "Streamlit"],
@@ -117,6 +122,7 @@ export const projects = [
     category: "Machine Learning",
     featured: true,
     subtitle: "Deep learning for multiple-choice questions",
+    problem: "Rank answer choices so the correct answer appears in the top three.",
     description:
       "Compares BiLSTM, BiGRU with attention, and fine-tuned BERT to rank the top three answers for each question.",
     tech: ["Python", "PyTorch", "BERT", "Transformers", "Streamlit"],
