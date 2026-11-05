@@ -16,10 +16,15 @@
 .filter-bar {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  margin: 44px 0 34px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
+  gap: 4px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 36px 0 32px;
+  padding: 5px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #ffffffb8;
+  box-shadow: var(--shadow-sm);
 }
 .filter-bar button {
   display: inline-flex;
@@ -32,7 +37,7 @@
   color: var(--muted);
   border: 1px solid transparent;
   background: transparent;
-  border-radius: 8px;
+  border-radius: 9px;
   transition: background 0.2s, color 0.2s;
 }
 .filter-bar button[aria-pressed="true"] {
@@ -98,7 +103,7 @@
   border-right: 1px solid var(--border);
   border-bottom: 0;
   padding: 32px;
-  background: #e8eee1;
+  background: radial-gradient(ellipse at center, #e8eee1, #d8e3cf);
 }
 .featured-project-grid > :first-child .project-image img {
   object-fit: contain;
@@ -108,7 +113,7 @@
 }
 .more-projects-grid {
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
+  gap: 20px;
 }
 @media (max-width: 900px) {
   .more-projects-grid {
@@ -138,7 +143,7 @@
     gap: 4px;
   }
   .filter-bar button {
-    padding-inline: 12px;
+    padding-inline: 9px;
     font-size: 0.75rem;
   }
 }

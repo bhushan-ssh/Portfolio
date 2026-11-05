@@ -18,18 +18,27 @@
   align-items: flex-start;
   min-height: 250px;
   padding: 32px;
-  border: 1px solid var(--border-strong);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: #ffffff8c;
+  background: #ffffffc7;
+  box-shadow: var(--shadow-sm);
+}
+.achievement-strip > div:first-child {
+  --ink: #fff;
+  --accent: #dcebbd;
+  --muted: #d4dfd3;
+  color: #fff;
+  border-color: #31583e;
+  background: linear-gradient(135deg, #31553d, #1d3d2b);
 }
 .achievement-strip svg {
   color: var(--accent);
-  margin-bottom: auto;
+  margin-bottom: 24px;
 }
 .achievement-strip strong {
   color: var(--ink);
   font-family: var(--font-heading);
-  font-size: clamp(2.3rem, 4vw, 3.6rem);
+  font-size: clamp(2.2rem, 3.4vw, 3.2rem);
   line-height: 1;
   letter-spacing: -0.07em;
   font-weight: 600;

@@ -19,30 +19,33 @@
   padding: 30px;
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: #fff;
+  background: linear-gradient(145deg, #fff 40%, #f3f7ee);
+  box-shadow: var(--shadow-sm);
   transition:
     transform 0.2s,
     border-color 0.2s,
-    background 0.2s;
+    box-shadow 0.2s;
 }
 .skill-card:hover {
   transform: translateY(-3px);
   border-color: var(--border-strong);
-  background: #fff;
+  box-shadow: var(--shadow-lg);
 }
 .skill-icon {
   width: 46px;
   height: 46px;
   display: grid;
   place-items: center;
-  background: var(--sage-light);
-  border-radius: 12px;
+  background: linear-gradient(145deg, #f3f8e9, var(--sage-light));
+  border: 1px solid #d7e3cb;
+  border-radius: 14px;
   color: var(--ink);
   margin-bottom: 24px;
 }
 .skill-card h3 {
   font-size: 1.15rem;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  letter-spacing: -0.03em;
 }
 .skill-card .tech-list span {
   color: var(--muted);
@@ -53,10 +56,10 @@
 }
 .exploring {
   margin-top: 28px;
-  padding: 24px 28px;
+  padding: 20px 26px;
   background: #ffffffd9;
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius);
   display: flex;
   align-items: center;
   gap: 24px;

@@ -19,11 +19,11 @@
   --accent-hover: #244d31;
   --border: #e0e6db;
   --border-strong: #b8c5b3;
-  --shadow-sm: 0 2px 6px #1d3d2b04, 0 8px 24px #1d3d2b06;
-  --shadow-lg: 0 6px 16px #1d3d2b08, 0 20px 48px #1d3d2b12;
-  --radius-sm: 8px;
-  --radius: 16px;
-  --radius-lg: 24px;
+  --shadow-sm: 0 1px 2px #1d3d2b05, 0 6px 20px #1d3d2b08;
+  --shadow-lg: 0 2px 8px #1d3d2b06, 0 18px 40px -12px #1d3d2b20;
+  --radius-sm: 12px;
+  --radius: 20px;
+  --radius-lg: 28px;
   --space-1: 8px;
   --space-2: 16px;
   --space-3: 24px;

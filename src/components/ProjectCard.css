@@ -4,7 +4,7 @@
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--card-surface);
-  box-shadow: none;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
   transition:
@@ -13,7 +13,8 @@
     border-color 0.25s;
   min-width: 0;
 }
-.project-card:hover {
+.project-card:hover,
+.project-card:focus-within {
   transform: translateY(-3px);
   border-color: var(--border-strong);
   box-shadow: var(--shadow-lg);
@@ -24,7 +25,7 @@
   position: relative;
   padding: 24px;
   width: 100%;
-  background: #edf0eb;
+  background: linear-gradient(145deg, #edf0eb, #e3eadd);
   aspect-ratio: 1.9;
   overflow: hidden;
 }
@@ -37,7 +38,7 @@
   height: 100%;
   object-fit: cover;
   object-position: top;
-  border-radius: 6px;
+  border-radius: 10px;
   box-shadow: 0 8px 24px #252b2512;
   transition: transform 0.35s;
 }
@@ -95,14 +96,16 @@
   color: var(--accent-hover);
   background: var(--sage-light);
   padding: 6px 9px;
-  border-radius: 5px;
+  border-radius: 100px;
   letter-spacing: 0.05em;
 }
 .project-body h3 {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  font-size: 1.6rem;
+  align-items: baseline;
+  gap: 12px;
+  font-size: 1.65rem;
+  line-height: 1.25;
   letter-spacing: -0.04em;
 }
 .project-body h3 > span {
@@ -158,7 +161,7 @@
   margin-bottom: 4px;
 }
 .project-card.compact {
-  padding: 20px 22px;
+  padding: 26px;
   min-height: 190px;
 }
 .compact .project-body {

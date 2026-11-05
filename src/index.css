@@ -73,7 +73,7 @@ main:focus {
   margin-inline: auto;
 }
 .section {
-  padding-block: 120px;
+  padding-block: 104px;
 }
 .section-band {
   position: relative;
@@ -108,8 +108,8 @@ main:focus {
   place-items: center;
   width: 30px;
   height: 30px;
-  border: 1px solid var(--border-strong);
-  border-radius: 50%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
   font-size: 0.65rem;
   letter-spacing: 0;
   font-variant-numeric: tabular-nums;
@@ -175,15 +175,16 @@ main:focus {
   box-shadow: var(--shadow-sm);
 }
 .button-primary {
-  background: var(--ink);
+  background: linear-gradient(145deg, #31563f, var(--ink));
   color: #fff;
+  box-shadow: 0 2px 3px #17332214, inset 0 1px 0 #ffffff26;
 }
 .button-primary:hover:not(:disabled) {
   background: var(--accent);
 }
 .button-secondary {
   border-color: var(--border);
-  background: transparent;
+  background: #ffffffb3;
   color: var(--text);
 }
 .button-secondary:hover {
@@ -235,7 +236,7 @@ main:focus {
   color: var(--muted);
   padding: 5px 10px;
   border: 1px solid var(--border);
-  border-radius: 6px;
+  border-radius: 100px;
   background: var(--surface);
 }
 .sr-only {

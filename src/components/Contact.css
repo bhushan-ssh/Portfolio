@@ -9,7 +9,7 @@
 .contact-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
-  gap: 96px;
+  gap: 64px;
   align-items: center;
 }
 .contact-section h2 {
@@ -31,7 +31,7 @@
   max-width: 100%;
   margin-top: 36px;
   padding: 17px 20px;
-  border-radius: 10px;
+  border-radius: var(--radius-sm);
   color: #fff;
   background: var(--ink);
   font-size: clamp(0.9rem, 1.6vw, 1.08rem);
@@ -58,12 +58,17 @@
   background: var(--accent);
 }
 .social-directory {
+  --text: #f6f9f0;
+  --accent: #dcebbd;
+  --accent-hover: #f0f8de;
+  --sage-light: #ffffff12;
+  --white: #ffffff08;
   padding: 34px;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  background: #fff;
+  border: 1px solid #365442;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(145deg, #2b4c37, #193626);
   color: var(--text);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-lg);
 }
 .social-directory h3 {
   font-size: 1.2rem;
@@ -80,14 +85,15 @@
   gap: 12px;
   min-height: 64px;
   padding: 10px;
-  border: 1px solid transparent;
+  border: 1px solid #ffffff1c;
   border-radius: 10px;
   background: var(--white);
   font-size: 0.86rem;
   font-weight: 500;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, background 0.2s, border-color 0.2s;
 }
-.social-card:hover {
+.social-card:hover,
+.social-card:focus-visible {
   transform: translateY(-2px);
   background: var(--sage-light);
   border-color: var(--accent);
