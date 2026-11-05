@@ -36,8 +36,8 @@ function CertificateCard({ certificate }) {
           className="text-link"
           href={asset(certificate.pdf)}
           target="_blank"
-          rel="noreferrer"
-          aria-label={`View ${certificate.title} certificate (PDF, opens in a new tab)`}
+          rel="noopener noreferrer"
+          aria-label={`View certificate: ${certificate.title} (PDF, opens in a new tab)`}
         >
           View certificate <Icon name="arrow" size={16} />
         </a>
@@ -65,7 +65,7 @@ export default function Certifications() {
             className="text-link"
             href="https://www.hackerrank.com/profile/bhushan_ssh"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             HackerRank profile <Icon name="arrow" />
           </a>

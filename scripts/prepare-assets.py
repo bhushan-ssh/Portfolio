@@ -13,7 +13,7 @@ PUBLIC = ROOT / 'public'
 def save_asset(image, path, **options):
     # Avoid truncating an asset while a local preview server is reading it.
     buffer = BytesIO()
-    image.save(buffer, format='WEBP' if path.suffix == '.webp' else 'PNG', **options)
+    image.save(buffer, format={'.webp': 'WEBP', '.ico': 'ICO'}.get(path.suffix, 'PNG'), **options)
     payload = buffer.getvalue()
     if path.exists() and path.read_bytes() == payload:
         return
@@ -66,9 +66,10 @@ draw.text((74, 430), 'Full-Stack Developer\n& Data Science Student', fill='#5276
 photo = ImageOps.fit(Image.open(PUBLIC / 'profile.jpg'), (350, 470), centering=(0.5, 0.38))
 card.paste(photo, (780, 80))
 save_asset(card, PUBLIC / 'og-image.png', optimize=True)
-for size, name in [(32, 'favicon-32.png'), (180, 'apple-touch-icon.png')]:
+for size, name in [(32, 'favicon-32.png'), (180, 'apple-touch-icon.png'), (192, 'icon-192.png'), (512, 'icon-512.png')]:
     icon = Image.new('RGB', (size, size), '#527653')
     d = ImageDraw.Draw(icon)
     d.text((size * .2, size * .02), 'b', font=font(int(size * .78)), fill='white')
     save_asset(icon, PUBLIC / name)
+save_asset(icon, PUBLIC / 'favicon.ico', sizes=[(16, 16), (32, 32), (48, 48)])
 print('Prepared WebP images, 21 certificate thumbnails, social card, and icons.')

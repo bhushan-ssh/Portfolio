@@ -39,7 +39,7 @@ export default function Projects() {
             className="text-link"
             href="https://github.com/bhushan-ssh"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
           >
             More on GitHub <Icon name="arrow" />
           </a>
@@ -111,7 +111,7 @@ export default function Projects() {
               className="text-link"
               href={selected.repo}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Explore the source <Icon name="arrow" />
             </a>
@@ -168,7 +168,7 @@ export default function Projects() {
                   className="button button-primary"
                   href={selected.repo}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   View source on GitHub <Icon name="arrow" size={16} />
                 </a>

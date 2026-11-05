@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://portfolio-plum-beta-63.vercel.app/sitemap.xml

@@ -86,8 +86,8 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
             className="text-link"
             href={project.repo}
             target="_blank"
-            rel="noreferrer"
-            aria-label={`${project.title} source on GitHub`}
+            rel="noopener noreferrer"
+            aria-label={`View source: ${project.title} on GitHub`}
           >
             <Icon name="github" size={17} /> View source{" "}
             <Icon name="arrow" size={16} />
@@ -97,7 +97,7 @@ export default function ProjectCard({ project, onPreview, onCaseStudy }) {
               className="text-link"
               href={project.demo}
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               Live demo <Icon name="arrow" size={16} />
             </a>

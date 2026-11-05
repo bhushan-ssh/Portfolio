@@ -39,7 +39,7 @@ export default function Contact() {
                 key={social.name}
                 href={social.href}
                 {...(social.href.startsWith("https")
-                  ? { target: "_blank", rel: "noreferrer" }
+                  ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
               >
                 <span className="social-card-icon">

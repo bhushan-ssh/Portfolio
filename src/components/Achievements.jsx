@@ -7,11 +7,8 @@ function Counter({ item }) {
   const ref = useRef(null);
   const [count, setCount] = useState(item.count);
   useEffect(() => {
-    if (
-      !item.count ||
-      window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    )
-      return;
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    if (!item.count || motion.matches || !("IntersectionObserver" in window)) return;
     let frame;
     const observer = new IntersectionObserver(([entry]) => {
       if (!entry.isIntersecting) return;
@@ -25,15 +22,27 @@ function Counter({ item }) {
       observer.disconnect();
     });
     observer.observe(ref.current);
+    const stop = () => {
+      if (!motion.matches) return;
+      cancelAnimationFrame(frame);
+      observer.disconnect();
+      setCount(item.count);
+    };
+    motion.addEventListener("change", stop);
     return () => {
+      motion.removeEventListener("change", stop);
       observer.disconnect();
       cancelAnimationFrame(frame);
     };
   }, [item.count]);
   return (
     <strong ref={ref}>
-      <span className="sr-only">{item.value}</span>
-      <span aria-hidden="true">{item.count ? `${count}+` : item.value}</span>
+      {item.count ? (
+        <>
+          <span className="sr-only">{item.value}</span>
+          <span className="animated-count" aria-hidden="true" data-value={`${count}+`} />
+        </>
+      ) : item.value}
     </strong>
   );
 }
