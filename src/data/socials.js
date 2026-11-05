@@ -16,5 +16,6 @@ export const socials = [
     href: "https://leetcode.com/u/bhushan_ssh/",
     icon: "terminal",
   },
+  { name: "Kaggle", href: "https://www.kaggle.com/bhushanssh", icon: "database" },
   { name: "Email", href: `mailto:${email}`, icon: "mail" },
 ];

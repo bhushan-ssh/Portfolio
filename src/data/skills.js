@@ -7,7 +7,7 @@ export const skills = [
   {
     title: "Data Analysis",
     icon: "database",
-    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "EDA"],
+    items: ["Pandas", "NumPy", "Matplotlib", "Seaborn", "Plotly", "EDA"],
   },
   {
     title: "Machine Learning",
@@ -35,6 +35,8 @@ export const skills = [
       "SQLAlchemy",
       "MySQL",
       "SQLite",
+      "Redis",
+      "Celery / Celery Beat",
       "Authentication",
       "RBAC",
     ],
@@ -45,6 +47,8 @@ export const skills = [
     items: [
       "HTML",
       "CSS",
+      "Vue 3",
+      "Jinja2",
       "Streamlit",
       "Git",
       "GitHub",
@@ -54,6 +58,7 @@ export const skills = [
   },
 ];
 export const exploring = [
-  "Modern JavaScript frameworks",
-  "Applied machine learning",
+  "Backend architecture",
+  "ML systems",
+  "Advanced SQL",
 ];

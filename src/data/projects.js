@@ -8,9 +8,9 @@ export const projects = [
     subtitle: "AI-powered predictive maintenance",
     description:
       "A predictive maintenance solution using machine learning to estimate remaining useful life and predict failures.",
-    tech: ["Python", "Machine Learning", "LSTM"],
-    // TODO(Bhushan): add real metric — RUL RMSE/MAE, or "85% failure-classification accuracy" if that's what it measured.
-    result: "1st place at SVIT HackVerse 2K26 · LSTM-based RUL prediction",
+    tech: ["Python", "LSTM", "Streamlit", "Plotly"],
+    // TODO(Bhushan): confirm the held-out RUL RMSE/MAE and evaluation split before publishing a metric.
+    result: "1st place at SVIT HackVerse 2K26 · LSTM-based Remaining Useful Life prediction",
     detail:
       "Led a 4-person team to turn machine sensor data into maintenance insights.",
     repo: "https://github.com/bhushan-ssh/Uptime",
@@ -27,7 +27,7 @@ export const projects = [
     description:
       "A career platform connecting students with opportunities, featuring role-based access and REST APIs.",
     tech: ["Vue 3", "Flask-RESTful", "SQLAlchemy", "SQLite", "Redis", "Celery"],
-    result: "Role-based student, company & admin workflows",
+    result: "Role-based workflows for students, companies & admins",
     repo: "https://github.com/bhushan-ssh/CareerLink",
     image: "projects/careerlink.webp",
     width: 1440,
@@ -55,7 +55,7 @@ export const projects = [
     subtitle: "A better way to manage quizzes",
     description:
       "A quiz management application with CRUD functionality, session handling, and role-based access control.",
-    tech: ["Python", "Flask", "SQLAlchemy", "SQLite"],
+    tech: ["Python", "Flask", "SQLAlchemy", "SQLite", "Jinja2", "Bootstrap"],
     result: "Quiz attempts, scoring & performance analytics",
     repo: "https://github.com/bhushan-ssh/Quizmaster",
     image: "projects/quizmaster.webp",
