@@ -1,12 +1,19 @@
 import { useState } from "react";
-import { asset, projectImageSrcSet } from "../data/assets";
+import { asset, projectImageSrcSet } from "../data/content";
 import Icon from "./Icon";
 import "./ProjectCard.css";
 export default function ProjectCard({ project, onPreview, onCaseStudy }) {
   const [failed, setFailed] = useState(false);
   const compact = !project.featured;
   return (
-    <article className={`project-card reveal${compact ? " compact" : ""}`}>
+    <article
+      className={`project-card reveal${compact ? " compact" : ""}`}
+      onPointerMove={(event) => {
+        const bounds = event.currentTarget.getBoundingClientRect();
+        event.currentTarget.style.setProperty("--spot-x", `${event.clientX - bounds.left}px`);
+        event.currentTarget.style.setProperty("--spot-y", `${event.clientY - bounds.top}px`);
+      }}
+    >
       {project.image && (
         <button
           className={`project-image ${project.id}`}

@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { certifications } from "../data/certifications";
-import { asset } from "../data/assets";
+import { certifications, asset } from "../data/content";
 import SectionHeading from "./SectionHeading";
 import Icon from "./Icon";
 import "./Certifications.css";

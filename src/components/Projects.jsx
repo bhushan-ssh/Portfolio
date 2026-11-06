@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { projects } from "../data/projects";
-import { asset, projectImageSrcSet } from "../data/assets";
+import { projects, asset, projectImageSrcSet } from "../data/content";
 import SectionHeading from "./SectionHeading";
 import ProjectCard from "./ProjectCard";
 import Modal from "./Modal";
@@ -52,11 +51,11 @@ export default function Projects() {
               onClick={() => setFilter(item)}
             >
               {item}
-              {item === "All" && <span>{projects.length}</span>}
+              <span>{item === "All" ? projects.length : projects.filter((project) => project.category === item).length}</span>
             </button>
           ))}
         </div>
-        <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">
+        <p className="project-count" role="status" aria-live="polite" aria-atomic="true">
           Showing {visible.length} {filter === "All" ? "" : filter} projects
         </p>
         {featuredProjects.length > 0 && (

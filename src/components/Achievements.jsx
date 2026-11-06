@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import { achievements } from "../data/achievements";
+import { achievements } from "../data/content";
 import Icon from "./Icon";
 import SectionHeading from "./SectionHeading";
 import "./Achievements.css";

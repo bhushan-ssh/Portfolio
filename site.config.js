@@ -1,5 +1,4 @@
-import { email, socials } from "./src/data/socials.js";
-import { education } from "./src/data/education.js";
+import { email, socials, education } from "./src/data/content.js";
 
 export const SITE_URL = "https://portfolio-plum-beta-63.vercel.app";
 

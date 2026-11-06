@@ -1,7 +1,5 @@
 import Icon from "./Icon";
-import { asset } from "../data/assets";
-import { projects } from "../data/projects";
-import { achievements } from "../data/achievements";
+import { asset, projects, achievements } from "../data/content";
 import "./Hero.css";
 export default function Hero() {
   return (
@@ -27,10 +25,11 @@ export default function Hero() {
         <p className="hero-description">
           I turn complex ideas into useful products with thoughtful code and data.
         </p>
-        <p className="hero-proof">
-          <Icon name="trophy" size={16} />
-          <span>Hackathon winner · {projects.length} shipped projects · {achievements.find((item) => item.count)?.value} DSA problems</span>
-        </p>
+        <div className="hero-stats" aria-label="Portfolio highlights">
+          <span><Icon name="trophy" size={15} /> Hackathon winner</span>
+          <span><strong>{projects.length}</strong> shipped projects</span>
+          <span><strong>{achievements.find((item) => item.count)?.value}</strong> DSA problems</span>
+        </div>
         <div className="hero-actions">
           <a className="button button-primary" href="#projects">
             View projects <Icon name="downRight" />
@@ -74,6 +73,7 @@ export default function Hero() {
             </div>
           </div>
         </div>
+        <div className="portrait-study"><Icon name="education" size={18} /> IIT Madras · Data Science / B.E. IT</div>
       </div>
       <div className="hero-bottom">
         <p>

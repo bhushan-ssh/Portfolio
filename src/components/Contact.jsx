@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { email, socials } from "../data/socials";
+import { email, socials } from "../data/content";
 import Icon from "./Icon";
 import SectionHeading from "./SectionHeading";
 import "./Contact.css";
@@ -13,7 +13,7 @@ export default function Contact() {
     setCopyStatus("");
     try {
       await navigator.clipboard.writeText(email);
-      setCopyStatus("Email copied.");
+      setCopyStatus("Copied!");
     } catch {
       setCopyStatus("Couldn’t copy automatically. Select the email address to copy it.");
     } finally {

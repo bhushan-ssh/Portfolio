@@ -1,4 +1,4 @@
-import { education } from "../data/education";
+import { education } from "../data/content";
 import "./Education.css";
 export default function Education() {
   return (

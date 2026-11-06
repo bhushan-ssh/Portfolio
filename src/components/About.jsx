@@ -41,10 +41,6 @@ export default function About() {
             enjoy learning by building projects and working with a team to solve
             real problems.
           </p>
-          <aside className="currently-building" aria-labelledby="building-heading">
-            <h3 id="building-heading">Currently building</h3>
-            <p>TODO(Bhushan) — Add your current project, the problem it solves, and a link to follow its progress.</p>
-          </aside>
           <Education />
         </div>
       </div>

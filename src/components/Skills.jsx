@@ -1,4 +1,4 @@
-import { skills, exploring } from "../data/skills";
+import { skills, exploring } from "../data/content";
 import SectionHeading from "./SectionHeading";
 import Icon from "./Icon";
 import "./Skills.css";
