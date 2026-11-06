@@ -15,6 +15,12 @@
   --success-text: #047857;
   --amber-bg: #FFFBEB;
   --amber-text: #B45309;
+  --brand-accent: #4F46E5;
+  --brand-github: #24292F;
+  --brand-linkedin: #0A66C2;
+  --brand-hackerrank: #008F54;
+  --brand-leetcode: #C77700;
+  --brand-kaggle: #087EA4;
   --shadow-sm: 0 1px 2px rgba(15,23,42,.04), 0 8px 24px rgba(15,23,42,.06);
   --shadow-lg: 0 12px 40px rgba(15,23,42,.12);
   --radius-sm: 12px;

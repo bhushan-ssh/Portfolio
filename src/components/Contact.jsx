@@ -57,7 +57,7 @@ export default function Contact() {
           <div className="social-directory-grid">
             {socials.map((social) => (
               <a
-                className="social-card"
+                className={`social-card ${social.name.toLowerCase()}`}
                 key={social.name}
                 href={social.href}
                 {...(social.href.startsWith("https")
