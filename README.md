@@ -91,10 +91,12 @@ For a GitHub Pages project path, build with:
 ```sh
 npm run build -- --base=/portfolio/
 
-
-
-
 ```
+
+
+
+
+
 
 You can also set `VITE_BASE_PATH` in the build process environment. Set the public domain in `site.config.js`. Vite uses it for HTML metadata and generates `robots.txt` and `sitemap.xml` for the build and development server. The site uses fragment navigation and does not need an SPA rewrite.
 
