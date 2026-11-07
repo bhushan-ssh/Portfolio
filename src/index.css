@@ -62,7 +62,6 @@ textarea {
   outline: 3px solid var(--accent);
   outline-offset: 4px;
 }
-
 main:focus {
   outline: none;
 }
