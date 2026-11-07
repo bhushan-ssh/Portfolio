@@ -68,6 +68,10 @@ Edit the files in `src/data/` to update content. Projects are filtered by catego
 
 The original images and PDFs are retained. Optimized image variants are committed, so a normal build needs no Python packages. After replacing source images or certificate PDFs, regenerate variants with:
 
+
+
+
+
 ```sh
 python -m pip install pillow pypdfium2
 python scripts/prepare-assets.py
