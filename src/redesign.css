@@ -15,6 +15,17 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; }
 .button-secondary:hover { background: var(--accent-soft); }
 .text-link { color: var(--accent); }
 .status-dot { background: #10B981; box-shadow: 0 0 0 4px rgba(16,185,129,.13); }
+
+
+
+
+
+
+
+
+
+
+
 .tech-list span { background: var(--bg-subtle); color: var(--text-muted); border-color: var(--border); font-family: var(--font-mono); font-size: .68rem; }
 
 /* Floating glass navigation and top progress rail */
