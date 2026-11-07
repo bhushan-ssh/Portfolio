@@ -16,7 +16,6 @@ body { background: var(--bg); color: var(--text); overflow-x: hidden; }
 .text-link { color: var(--accent); }
 .status-dot { background: #10B981; box-shadow: 0 0 0 4px rgba(16,185,129,.13); }
 .tech-list span { background: var(--bg-subtle); color: var(--text-muted); border-color: var(--border); font-family: var(--font-mono); font-size: .68rem; }
-
 /* Floating glass navigation and top progress rail */
 .site-header { position: sticky; top: 12px; width: min(1200px, calc(100% - 40px)); margin: 12px auto 0; border: 1px solid rgba(15,23,42,.08); border-radius: 999px; background: rgba(255,255,255,.76); backdrop-filter: blur(14px) saturate(160%); box-shadow: 0 8px 28px rgba(15,23,42,.07); }
 .navbar { width: calc(100% - 36px); min-height: 64px; transition: min-height .2s ease; }
