@@ -60,6 +60,10 @@ docs/
   asset-audit.md           Source asset inventory and content notes
 ```
 
+
+
+
+
 Edit the files in `src/data/` to update content. Projects are filtered by category; if you add a category, add its button in `src/components/Projects.jsx`. Each project may include a `demo` URL, and projects with a `caseStudy` object show a case study button. The certificate gallery shows three records initially and reveals the full list on request.
 
 The original images and PDFs are retained. Optimized image variants are committed, so a normal build needs no Python packages. After replacing source images or certificate PDFs, regenerate variants with:
