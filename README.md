@@ -22,12 +22,6 @@ The production build prerenders HTML and hydrates it in the browser. Text and li
 
 
 
-
-
-
-
-
-
 ## Project structure
 
 ```text
