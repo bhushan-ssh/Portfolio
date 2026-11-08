@@ -92,14 +92,6 @@ For a GitHub Pages project path, build with:
 npm run build -- --base=/portfolio/
 
 ```
-
-
-
-
-
-
 You can also set `VITE_BASE_PATH` in the build process environment. Set the public domain in `site.config.js`. Vite uses it for HTML metadata and generates `robots.txt` and `sitemap.xml` for the build and development server. The site uses fragment navigation and does not need an SPA rewrite.
-
 ## Optional browser checks
-
 `scripts/check-browser.cjs` checks navigation, project filters and dialogs, certificate PDFs, the resume, common viewport widths, and JavaScript errors. It requires Playwright and Google Chrome outside the app dependencies. Build the site, start `npm run preview`, then run `node scripts/check-browser.cjs`. Set `PREVIEW_URL` if preview runs on another address, or `PLAYWRIGHT_MODULE` if Playwright is installed at a custom path. Results are written to the ignored `artifacts/` directory.
