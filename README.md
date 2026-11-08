@@ -52,11 +52,6 @@ python -m pip install pillow pypdfium2
 python scripts/prepare-assets.py
 ```
 
-
-
-
-
-
 ## Deployment
 
 Vercel uses the settings in `vercel.json`: build command `npm run build`, output directory `dist`. Other static hosts can use the same command and directory.
