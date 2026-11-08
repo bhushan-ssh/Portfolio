@@ -10,15 +10,6 @@ Use Node.js 22.12+ and npm.
 npm install
 npm run dev
 ```
-
-
-
-
-
-
-
-
-
 | Command | Purpose |
 | --- | --- |
 | `npm run dev` | Start the development server |
