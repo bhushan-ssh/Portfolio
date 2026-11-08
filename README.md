@@ -103,6 +103,3 @@ You can also set `VITE_BASE_PATH` in the build process environment. Set the publ
 ## Optional browser checks
 
 `scripts/check-browser.cjs` checks navigation, project filters and dialogs, certificate PDFs, the resume, common viewport widths, and JavaScript errors. It requires Playwright and Google Chrome outside the app dependencies. Build the site, start `npm run preview`, then run `node scripts/check-browser.cjs`. Set `PREVIEW_URL` if preview runs on another address, or `PLAYWRIGHT_MODULE` if Playwright is installed at a custom path. Results are written to the ignored `artifacts/` directory.
-
-
-
