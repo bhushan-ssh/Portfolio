@@ -21,6 +21,8 @@ npm run dev
 
 The production build prerenders HTML and hydrates it in the browser. Text and links remain available without JavaScript; filters and dialogs need JavaScript. There is no runtime server or contact form endpoint.
 
+
+
 ## Project structure
 
 ```text
