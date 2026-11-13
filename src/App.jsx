@@ -30,6 +30,14 @@ export default function App() {
     return () => observer.disconnect();
   }, []);
   return (
+
+
+
+
+
+
+
+    
     <>
       <div id="top" />
       <a className="skip-link" href="#main">
