@@ -1,8 +1,6 @@
-# Bhushan Sonawane — Portfolio
-
+# Bhushan Sonawane Portfolio
 
 A static portfolio built with React 19 and Vite. It includes project filters, screenshot and case study dialogs, an education timeline, a certificate gallery, and links to contact and social accounts.
-
 
 ## Run locally
 
